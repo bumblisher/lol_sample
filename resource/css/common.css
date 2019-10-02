@@ -73,7 +73,7 @@ select option{height:34px;padding:3px}
 .formwrap .contarea{margin-top: 30px;padding-top: 30px;border-top: 1px solid #c3c3c3}
 .formwrap .contarea .rec_btn_snsLogin + .rec_btn_snsLogin{margin-top: 15px}
 
-.btnarea{position: fixed;bottom: 0px;left: 0px;width:100%;}
+.btnarea{position: fixed;bottom: 0px;left: 0px;width:100%;z-index: 10;}
 .btnarea + .formwrap{padding-bottom:100px}
 .btnarea .btn_blue{border-radius:0}
 /* form END */
