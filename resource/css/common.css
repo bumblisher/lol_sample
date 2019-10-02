@@ -47,7 +47,7 @@ select option{height:34px;padding:3px}
 .select{}
 
 .rec_input_tit{margin:20px 0 10px;color:#2f2fd3;}
-.rec_input_tit.req::after{content: '';display: inline-block;width: 6px;height: 6px;margin-left: 10px;background: url(/lol_sample/resource/images/ico_req@3x.png) no-repeat center center;background-size: 6px 6px;vertical-align:4px}
+.rec_input_tit.req::after{content: '';display: inline-block;width: 6px;height: 6px;margin-left: 10px;background: url(../images/ico_req@3x.png) no-repeat center center;background-size: 6px 6px;vertical-align:4px}
 .rec_input{height:50px;  border: solid 1px #2f2fd3;padding: 13px 10px;background-color: #ffffff;box-sizing: border-box}
 .rec_input_txt{color:#828282;line-height:28px}
 .rec_input_txt.caution{color: #ff4040}
@@ -55,9 +55,9 @@ select option{height:34px;padding:3px}
 .ipt_chk{position: relative;}
 .ipt_chk input[type="checkbox"]{display: none}
 .ipt_chk label{display:inline-block;padding-left:40px;line-height:30px;color: #828282;cursor: pointer;}
-.ipt_chk label::before{content: '';position: absolute;left: 0;top:0;width:30px;height: 30px;border: 1px solid #828282;background: url(/lol_sample/resource/images/check@3x.png) no-repeat center center;background-size:24px 24px;border-radius: 4px;box-sizing: border-box}
-.ipt_chk.req label::after{content: '';display: inline-block;width: 6px;height: 6px;margin-left: 10px;background: url(/lol_sample/resource/images/ico_req@3x.png) no-repeat center center;background-size: 6px 6px;vertical-align:4px}
-.ipt_chk input[type="checkbox"]:checked + label::before{border-color: #2f2fd3;background:#2f2fd3 url(/lol_sample/resource/images/check_on@3x.png) no-repeat center center;background-size:24px 24px;}
+.ipt_chk label::before{content: '';position: absolute;left: 0;top:0;width:30px;height: 30px;border: 1px solid #828282;background: url(../images/check@3x.png) no-repeat center center;background-size:24px 24px;border-radius: 4px;box-sizing: border-box}
+.ipt_chk.req label::after{content: '';display: inline-block;width: 6px;height: 6px;margin-left: 10px;background: url(../images/ico_req@3x.png) no-repeat center center;background-size: 6px 6px;vertical-align:4px}
+.ipt_chk input[type="checkbox"]:checked + label::before{border-color: #2f2fd3;background:#2f2fd3 url(../images/check_on@3x.png) no-repeat center center;background-size:24px 24px;}
 .ipt_chk.inline{display: inline-block;}
 .grp_dep02 .ipt_chk label::before{border-radius: 15px}
 
@@ -68,7 +68,7 @@ select option{height:34px;padding:3px}
 /* form START */
 .formwrap{padding:20px;background-color:#fff;box-sizing:border-box}
 .formwrap .titlearea{display: flex;align-items:center;height: 60px;}
-.formwrap .titlearea h2{line-height: 60px;font-size:24px;padding-left:80px;background: url(/lol_sample/resource/images/logo_symbole@3x.png) no-repeat left center;background-size:60px 60px;}
+.formwrap .titlearea h2{line-height: 60px;font-size:24px;padding-left:80px;background: url(../images/logo_symbole@3x.png) no-repeat left center;background-size:60px 60px;}
 .formwrap .titlearea h3{line-height: 30px;font-size: 20px}
 .formwrap .contarea{margin-top: 30px;padding-top: 30px;border-top: 1px solid #c3c3c3}
 .formwrap .contarea .rec_btn_snsLogin + .rec_btn_snsLogin{margin-top: 15px}
