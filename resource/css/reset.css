@@ -12,7 +12,7 @@ table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed, 
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+time, mark, audio, video,button{
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -25,6 +25,8 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+button{border:none;border-radius:0;cursor: pointer;}
+html, body{height:100%;}
 body {
 	line-height: 1;
 }
@@ -49,7 +51,7 @@ select {
     -webkit-appearance: none;  /* 네이티브 외형 감추기 */
     -moz-appearance: none;
     appearance: none;
-    background: url(이미지 경로) no-repeat 95% 50%;  /* 화살표 모양의 이미지 */
+    /* background: url(이미지 경로) no-repeat 95% 50%;  화살표 모양의 이미지 */
 }
 
 /* IE 10, 11의 네이티브 화살표 숨기기 */
