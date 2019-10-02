@@ -48,7 +48,7 @@ select option{height:34px;padding:3px}
 
 .rec_input_tit{margin:20px 0 10px;color:#2f2fd3;}
 .rec_input_tit.req::after{content: '';display: inline-block;width: 6px;height: 6px;margin-left: 10px;background: url(../images/ico_req@3x.png) no-repeat center center;background-size: 6px 6px;vertical-align:4px}
-.rec_input{height:50px;  border: solid 1px #2f2fd3;padding: 13px 10px;background-color: #ffffff;box-sizing: border-box}
+.rec_input{height:50px;  border: solid 1px #2f2fd3;padding: 13px 10px;background-color: #ffffff;box-sizing: border-box;font-size: 16px}
 .rec_input_txt{color:#828282;line-height:28px}
 .rec_input_txt.caution{color: #ff4040}
 
