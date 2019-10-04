@@ -23,7 +23,8 @@
 .contwrap{position: relative;padding-top:100px;overflow: hidden;}
 
 .flexx{display: flex;flex-direction: row}
-.flexx > input{flex: 1;}
+.flexx > input[type="text"],
+.flexx > input[type="password"]{flex: 1;}
 .flexx > button{}
 .flexy{display: flex;flex-direction: column}
 
@@ -59,6 +60,8 @@ select option{height:34px;padding:3px}
 .ipt_chk.req label::after{content: '';display: inline-block;width: 6px;height: 6px;margin-left: 10px;background: url(../images/ico_req@3x.png) no-repeat center center;background-size: 6px 6px;vertical-align:4px}
 .ipt_chk input[type="checkbox"]:checked + label::before{border-color: #2f2fd3;background:#2f2fd3 url(../images/check_on@3x.png) no-repeat center center;background-size:24px 24px;}
 .ipt_chk.inline{display: inline-block;}
+.ipt_chk.all{padding-bottom: 10px;border-bottom: 1px dashed #ccc}
+.ipt_chk .btn_chksub{float: right;line-height: 30px;color: #ccc;text-decoration: none;font-size:14px}
 .grp_dep02 .ipt_chk label::before{border-radius: 15px}
 
 .btn_ipt{padding:0 25px;background-color: #fff}
@@ -72,6 +75,11 @@ select option{height:34px;padding:3px}
 .formwrap .titlearea h3{line-height: 30px;font-size: 20px}
 .formwrap .contarea{margin-top: 30px;padding-top: 30px;border-top: 1px solid #c3c3c3}
 .formwrap .contarea .rec_btn_snsLogin + .rec_btn_snsLogin{margin-top: 15px}
+.formwrap .contarea > .rec_input_tit,
+.formwrap .contarea > .rec_input_txt,
+.formwrap .contarea > .ipt_chk,
+.formwrap .contarea > .grp_dep02{margin-left: 10px}
+
 
 .btnarea{position: fixed;bottom: 0px;left: 0px;width:100%;z-index: 10;}
 .btnarea + .formwrap{padding-bottom:100px}
