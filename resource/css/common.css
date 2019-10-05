@@ -2,6 +2,8 @@
 
 /* common start */
 .bg_gray{background-color:#f7f7f7}
+
+.cl_blue{color:#2f2fd3}
 /* common END */
 
 /* button START*/
@@ -30,16 +32,16 @@
 
 .grp_dep02{}
 
-.flexx + .rec_input_txt,
-.rec_input + .rec_input_txt,
+.flexx + .txt_sub,
+.rec_input + .txt_sub,
 .ipt_chk + .ipt_chk,
 .ipt_chk + .grp_dep02{margin-top: 15px;}
-.flexx + .rec_input_txt.caution,
-.rec_input + .rec_input_txt.caution{margin-top:10px}
+.flexx + .txt_sub.caution,
+.rec_input + .txt_sub.caution{margin-top:10px}
 .flexx + .ipt_chk,
-.rec_input_txt + .ipt_chk{margin-top:12px}
+.txt_sub + .ipt_chk{margin-top:12px}
 .ipt_chk.inline + .ipt_chk.inline{margin:0 0 0 30px}
-.grp_dep02 + .rec_input_txt{margin-top:20px}
+.grp_dep02 + .txt_sub{margin-top:20px}
 /* layout END */
 
 /* componant START */
@@ -50,8 +52,11 @@ select option{height:34px;padding:3px}
 .rec_input_tit{margin:20px 0 10px;color:#2f2fd3;}
 .rec_input_tit.req::after{content: '';display: inline-block;width: 6px;height: 6px;margin-left: 10px;background: url(../images/ico_req@3x.png) no-repeat center center;background-size: 6px 6px;vertical-align:4px}
 .rec_input{height:50px;  border: solid 1px #2f2fd3;padding: 13px 10px;background-color: #ffffff;box-sizing: border-box;font-size: 16px}
-.rec_input_txt{color:#828282;line-height:28px}
-.rec_input_txt.caution{color: #ff4040}
+.txt_sub{color:#828282;line-height:28px}
+.txt_sub.caution{color: #ff4040}
+.txt_sub > .btn_txt{margin-left: 20px}
+
+.txt_cm{font-size: 24px;}
 
 .ipt_chk{position: relative;}
 .ipt_chk input[type="checkbox"]{display: none}
@@ -63,6 +68,10 @@ select option{height:34px;padding:3px}
 .ipt_chk.all{padding-bottom: 10px;border-bottom: 1px dashed #ccc}
 .ipt_chk .btn_chksub{float: right;line-height: 30px;color: #ccc;text-decoration: none;font-size:14px}
 .grp_dep02 .ipt_chk label::before{border-radius: 15px}
+
+.ipt_file{}
+.ipt_file > input[type="file"]{display: none;}
+.ipt_file > label{display: inline-block;padding:0 11px;line-height: 50px;cursor: pointer;}
 
 .btn_ipt{padding:0 25px;background-color: #fff}
 /* componant END */
@@ -76,7 +85,7 @@ select option{height:34px;padding:3px}
 .formwrap .contarea{margin-top: 30px;padding-top: 30px;border-top: 1px solid #c3c3c3}
 .formwrap .contarea .rec_btn_snsLogin + .rec_btn_snsLogin{margin-top: 15px}
 .formwrap .contarea > .rec_input_tit,
-.formwrap .contarea > .rec_input_txt,
+.formwrap .contarea > .txt_sub,
 .formwrap .contarea > .ipt_chk,
 .formwrap .contarea > .grp_dep02{margin-left: 10px}
 
