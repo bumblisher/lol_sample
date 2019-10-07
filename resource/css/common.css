@@ -22,7 +22,12 @@
 .header .nav ul li{display:inline-block}
 .header .rightarea{margin-left: auto}
 
-.contwrap{position: relative;padding-top:100px;overflow: hidden;}
+.contwrap{position: relative;padding-top:100px;text-align: center;/*overflow: hidden;*/}
+.container{display: inline-block;margin-top:50px}
+.content{display: inline-block;width:856px;text-align:left}
+.content.wide{width:932px;}
+.content.sideline{width:280px;}
+.content.sideuser{width:400px;}
 
 .flexx{display: flex;flex-direction: row}
 .flexx > input[type="text"],
@@ -74,6 +79,10 @@ select option{height:34px;padding:3px}
 .ipt_file > label{display: inline-block;padding:0 11px;line-height: 50px;cursor: pointer;}
 
 .btn_ipt{padding:0 25px;background-color: #fff}
+
+.ad_main{width:932px;height:240px;background: url(/resource/images/ad_main.png) no-repeat center center}
+.ad_left{position: absolute;width:160px;height:600px;background: url(/resource/images/ad_left.png) no-repeat center center}
+.ad_right{position: absolute;width:160px;height:600px;background: url(/resource/images/ad_left.png) no-repeat center center}
 /* componant END */
 
 
