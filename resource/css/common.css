@@ -23,11 +23,14 @@
 .header .rightarea{margin-left: auto}
 
 .contwrap{position: relative;padding-top:100px;text-align: center;/*overflow: hidden;*/}
-.container{display: inline-block;margin-top:50px}
+.container{position: relative;display: inline-block;margin-top:50px}
 .content{display: inline-block;width:856px;text-align:left}
 .content.wide{width:932px;}
 .content.sideline{width:280px;}
 .content.sideuser{width:400px;}
+
+.content .titlearea{height:50px;padding: 10px;box-sizing: border-box}
+.content .titlearea h3{font-size:20px;line-height: 29px;font-weight: bold}
 
 .flexx{display: flex;flex-direction: row}
 .flexx > input[type="text"],
@@ -47,6 +50,10 @@
 .txt_sub + .ipt_chk{margin-top:12px}
 .ipt_chk.inline + .ipt_chk.inline{margin:0 0 0 30px}
 .grp_dep02 + .txt_sub{margin-top:20px}
+
+.ad_main{width:932px;height:240px;background: url(/resource/images/ad_main.png) no-repeat center center}
+.ad_left{position: absolute;left:-200px;width:160px;height:600px;background: url(/resource/images/ad_left.png) no-repeat center center}
+.ad_right{position: absolute;right:-200px;width:160px;height:600px;background: url(/resource/images/ad_left.png) no-repeat center center}
 /* layout END */
 
 /* componant START */
@@ -80,9 +87,12 @@ select option{height:34px;padding:3px}
 
 .btn_ipt{padding:0 25px;background-color: #fff}
 
-.ad_main{width:932px;height:240px;background: url(/resource/images/ad_main.png) no-repeat center center}
-.ad_left{position: absolute;width:160px;height:600px;background: url(/resource/images/ad_left.png) no-repeat center center}
-.ad_right{position: absolute;width:160px;height:600px;background: url(/resource/images/ad_left.png) no-repeat center center}
+
+.pie-chart_wrap{position: relative;display: inline-block;}
+.pie-chart {position: relative;display:inline-block;width: 100px;height: 100px;border-radius: 50%;transition: 0.3s;z-index:1;}
+.pie-chart + .center{color:#2f2fd3;font-size:20px;background: #fff;display : block;position: absolute;top:5px; left:5px;width:90px; height:90px;border-radius: 50%;text-align:center; line-height: 90px;/*transform: translate(-50%, -50%);*/z-index: 1;}
+.pie-chart_wrap::before{content:'';position:absolute;left:2px;top:2px;width:96px;height:96px;border:2px solid #ccc;border-radius:50%;box-sizing:border-box;z-index:-1;}
+ 
 /* componant END */
 
 
