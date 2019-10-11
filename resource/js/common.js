@@ -1,5 +1,6 @@
 $(window).ready(function(){
-    draw(80, '.pie-chart1', '#2f2fd3');
+    draw(80, '#piechart1', '#2f2fd3');
+    draw(56, '#piechart2', '#2f2fd3');
  });
  
  function draw(max, classname, colorname){
