@@ -21,6 +21,8 @@
 .rec_btn_snsLogin.kakao{}
 .rec_btn_snsLogin.facebook{}
 
+
+.btn_cm{height: 50px;color:#828282;}
 .btn_blue{display:block;width:100%;height: 50px;background-color: #2f2fd3;color:#fff;font-weight: bold;border-radius:8px}
 /* button END*/
 
@@ -68,7 +70,8 @@
 .flexx > button{}
 .flexy{display: flex;flex-direction: column}
 
-.grp_dep02{}
+.btnarea{display: flex;}
+.btnarea .btn_cm{flex:1;border-top:1px solid #ebebeb}
 
 .flexx + .txt_input_sub,
 .rec_input + .txt_input_sub,
@@ -94,6 +97,7 @@ select option{height:34px;padding:3px}
 .rec_input_tit{margin:20px 0 10px;color:#2f2fd3;}
 .rec_input_tit.req::after{content: '';display: inline-block;width: 6px;height: 6px;margin-left: 10px;background: url(../images/ico_req@3x.png) no-repeat center center;background-size: 6px 6px;vertical-align:4px}
 .rec_input{height:50px;  border: solid 1px #2f2fd3;padding: 13px 10px;background-color: #ffffff;box-sizing: border-box;font-size: 16px}
+.rec_input.shadow{box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);border:none;}
 
 .txt_sub,
 .txt_input_sub{color:#828282;}
@@ -133,7 +137,8 @@ p.btn_ipt{line-height: 48px;}
 .formwrap .titlearea h2{line-height: 60px;font-size:24px;padding-left:80px;background: url(../images/logo_symbole@3x.png) no-repeat left center;background-size:60px 60px;}
 .formwrap .titlearea h3{line-height: 30px;font-size: 20px}
 .formwrap .contarea{margin-top: 30px;padding-top: 30px;border-top: 1px solid #c3c3c3}
-.formwrap .contarea .rec_btn_snsLogin + .rec_btn_snsLogin{margin-top: 15px}
+.formwrap .contarea .rec_btn_snsLogin + .rec_btn_snsLogin,
+.formwrap .contarea > .flexx + .flexx{margin-top: 15px}
 .formwrap .contarea > .rec_input_tit,
 .formwrap .contarea > .txt_input_sub,
 .formwrap .contarea > .ipt_chk,
@@ -144,8 +149,8 @@ p.btn_ipt{line-height: 48px;}
 .formwrap .contarea .txt_cm + .txt_sub{margin-top: 30px;}
 .formwrap .contarea .txt_sub + .rec_input_tit{margin-top: 50px;}
 .formwrap .btnfixed{height: 50px;margin-top:50px}
-
-.btnarea{position: fixed;bottom: 0px;left: 0px;width:100%;z-index: 10;}
+.formwrap .contarea + .btnarea{margin-top: 15px;}
+.btnfixed .btnarea{position: fixed;bottom: 0px;left: 0px;width:100%;z-index: 10;}
 .btnfixed .btn_blue{border-radius:0}
 /* form END */
 
@@ -155,13 +160,13 @@ p.btn_ipt{line-height: 48px;}
 /* 테블릿에서 사용될 스타일을 여기에 작성합니다. */
 @media screen and (min-width: 769px) {
     .grp_dep02{padding-left:40px}
-    .btnarea{position: absolute;bottom: 20px;left: 20px;right:20px;width: auto;}
+    .btnfixed .btnarea{position: absolute;bottom: 20px;left: 20px;right:20px;width: auto;}
     .btnfixed .btn_blue{border-radius:8px}
  }
 /* 데스크탑에서 사용될 스타일을 여기에 작성합니다. */
  @media screen and (min-width: 1280px) {
     .formwrap{width:560px;min-height:800px;margin:60px auto;padding:40px;}
-    .btnarea{position: absolute;bottom: 40px;left: 40px;right:40px;}
+    .btnfixed .btnarea{position: absolute;bottom: 40px;left: 40px;right:40px;}
     .btnfixed .btn_blue{border-radius:8px}
  }
  
