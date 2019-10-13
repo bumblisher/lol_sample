@@ -3,7 +3,17 @@
 /* common start */
 .bg_gray{background-color:#f7f7f7}
 
+.fs12{font-size: 12px !important;}
+.fs14{font-size: 14px !important;}
+.fs16{font-size: 16px !important;}
+.fs18{font-size: 18px !important;}
+.fs24{font-size: 24px !important;}
+
 .cl_blue{color:#2f2fd3}
+
+.tac{text-align: center;}
+.tal{text-align: left;}
+.tar{text-align: right;}
 /* common END */
 
 /* button START*/
@@ -25,9 +35,10 @@
 .header .nav ul li a{color:#828282;font-size: 24px;}
 .header .nav ul li.on a{color: #2f2fd3;font-weight:bold;}
 .header .rightarea{margin-left: auto}
-.header .rightarea button{height: 32px;border:1px solid #707070;padding: 4px 15px;color:#828282;border-radius:10px;}
+.header .rightarea button,
+.header .rightarea a{height: 32px;border:1px solid #707070;text-decoration: none;padding: 4px 15px;color:#828282;border-radius:10px;}
 
-.contwrap{position: relative;padding-top:100px;text-align: center;/*overflow: hidden;*/}
+.contwrap{position: relative;min-height: calc(100vh - 100px);padding-top:100px;text-align: center;/*overflow: hidden;*/}
 .container{position: relative;display: inline-block;margin-top:50px}
 .content{display: inline-block;width:856px;text-align:left}
 .content.wide{width:932px;}
@@ -36,6 +47,9 @@
 
 .content .titlearea{height:50px;padding: 10px;box-sizing: border-box}
 .content .titlearea h3{font-size:20px;line-height: 29px;font-weight: bold}
+
+.footer{height: 200px;background: #ebebeb;margin-top: 50px;}
+.footer p{display: flex;height: 100%;align-items: center;justify-content: center;color:#777;font-size: 24px;}
 
 .listbox{}
 .listbox li{display: inline-block;}
@@ -56,16 +70,16 @@
 
 .grp_dep02{}
 
-.flexx + .txt_sub,
-.rec_input + .txt_sub,
+.flexx + .txt_input_sub,
+.rec_input + .txt_input_sub,
 .ipt_chk + .ipt_chk,
 .ipt_chk + .grp_dep02{margin-top: 15px;}
-.flexx + .txt_sub.caution,
-.rec_input + .txt_sub.caution{margin-top:10px}
+.flexx + .txt_input_sub.caution,
+.rec_input + .txt_input_sub.caution{margin-top:10px}
 .flexx + .ipt_chk,
-.txt_sub + .ipt_chk{margin-top:12px}
+.txt_input_sub + .ipt_chk{margin-top:12px}
 .ipt_chk.inline + .ipt_chk.inline{margin:0 0 0 30px}
-.grp_dep02 + .txt_sub{margin-top:20px}
+.grp_dep02 + .txt_input_sub{margin-top:20px}
 
 .ad_main{width:932px;height:240px;background:#ccc url(/resource/images/ad_main.png) no-repeat center center}
 .ad_left{position: absolute;left:-200px;width:160px;height:600px;background: url(/resource/images/ad_left.png) no-repeat center center}
@@ -80,11 +94,12 @@ select option{height:34px;padding:3px}
 .rec_input_tit{margin:20px 0 10px;color:#2f2fd3;}
 .rec_input_tit.req::after{content: '';display: inline-block;width: 6px;height: 6px;margin-left: 10px;background: url(../images/ico_req@3x.png) no-repeat center center;background-size: 6px 6px;vertical-align:4px}
 .rec_input{height:50px;  border: solid 1px #2f2fd3;padding: 13px 10px;background-color: #ffffff;box-sizing: border-box;font-size: 16px}
-.txt_sub{color:#828282;}
-.txt_sub.caution{color: #ff4040}
-.txt_sub > .btn_txt{margin-left: 20px}
 
-.txt_cm{font-size: 24px;}
+.txt_sub,
+.txt_input_sub{color:#828282;}
+.txt_sub.caution,
+.txt_input_sub.caution{color: #ff4040}
+.txt_input_sub > .btn_txt{margin-left: 20px}
 
 .ipt_chk{position: relative;}
 .ipt_chk input[type="checkbox"]{display: none}
@@ -102,7 +117,7 @@ select option{height:34px;padding:3px}
 .ipt_file > label{display: inline-block;padding:0 11px;line-height: 50px;cursor: pointer;}
 
 .btn_ipt{padding:0 25px;background-color: #fff}
-
+p.btn_ipt{line-height: 48px;}
 
 .piechart_wrap{position: relative;display: inline-block;}
 .piechart {position: relative;display:inline-block;width: 100px;height: 100px;border-radius: 50%;transition: 0.3s;z-index:1;}
@@ -120,10 +135,14 @@ select option{height:34px;padding:3px}
 .formwrap .contarea{margin-top: 30px;padding-top: 30px;border-top: 1px solid #c3c3c3}
 .formwrap .contarea .rec_btn_snsLogin + .rec_btn_snsLogin{margin-top: 15px}
 .formwrap .contarea > .rec_input_tit,
-.formwrap .contarea > .txt_sub,
+.formwrap .contarea > .txt_input_sub,
 .formwrap .contarea > .ipt_chk,
 .formwrap .contarea > .grp_dep02{margin-left: 10px}
-.formwrap .contarea .txt_sub{line-height:28px}
+.formwrap .contarea .txt_cm,
+.formwrap .contarea .txt_sub,
+.formwrap .contarea .txt_input_sub{line-height:28px}
+.formwrap .contarea .txt_cm + .txt_sub{margin-top: 30px;}
+.formwrap .contarea .txt_sub + .rec_input_tit{margin-top: 50px;}
 .formwrap .btnfixed{height: 50px;margin-top:50px}
 
 .btnarea{position: fixed;bottom: 0px;left: 0px;width:100%;z-index: 10;}
@@ -141,7 +160,7 @@ select option{height:34px;padding:3px}
  }
 /* 데스크탑에서 사용될 스타일을 여기에 작성합니다. */
  @media screen and (min-width: 1280px) {
-    .formwrap{width:560px;min-height:600px;margin:60px auto;padding:40px;}
+    .formwrap{width:560px;min-height:800px;margin:60px auto;padding:40px;}
     .btnarea{position: absolute;bottom: 40px;left: 40px;right:40px;}
     .btnfixed .btn_blue{border-radius:8px}
  }
