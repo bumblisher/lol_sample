@@ -21,3 +21,16 @@ $(window).ready(function(){
     $(classname).siblings().html(++i + "%");
  }
  
+
+openPopup = function(id, url, options){
+	$('html').addClass("openpop");
+	$('body').append("<div class='dim'></div>");
+	$('#popTest').show();
+
+	$(".dim").on("click", function(){
+		$(this).remove();
+		$('html').removeClass("openpop");
+		$('#popTest').hide();
+	});
+}
+

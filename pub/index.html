@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="resource/css/reset.css">
+    <link rel="stylesheet" href="resource/css/common.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="resource/js/common.js"></script>
+    <title>퍼블리싱</title>
+
+</head>
+<body class="index">
+    <h2>퍼블리싱 웹페이지 입니다.</h2>
+    <hr>
+    <h3>로그인 및 회원가입</h3>
+    <ul>
+        <li><a href="/pub/login.html">로그인</a></li>
+        <li><a href="/pub/signup.html">회원가입</a></li>
+        <li><a href="/pub/phone.html">휴대폰 인증</a></li>
+        <li><a href="/pub/report.html">신고하기</a></li>
+        <li><a href="/pub/findpw.html">비밀번호 찾기</a></li>
+        <li><a href="/pub/newpw.html">비밀번호 재설정</a></li>
+    </ul>
+    <hr>
+    <h3>메인페이지</h3>
+    <ul>
+        <li><a href="/pub/main.html">메인화면</a></li>
+        <li><a href="#" id="openPopup" onclick="openPopup()">팝업띄우기</a></li>
+    </ul>
+    <div class="popwrap alert" id="popTest">
+        <p class="tit_pop">서비스 안내</p>
+        <p class="txt_pop">서비스를 이용하기 위해서는<br>로그인이 필요합니다.</p>
+        <div class="btnfixed">
+            <div class="btnarea">
+                <button class="btn_cm">취소</button>
+                <button class="btn_cm posi">확인</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
