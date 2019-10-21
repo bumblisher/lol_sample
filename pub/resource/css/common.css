@@ -24,34 +24,53 @@
 
 .btn_cm{height: 50px;color:#828282;}
 .btn_blue{display:block;width:100%;height: 50px;background-color: #2f2fd3;color:#fff;font-weight: bold;border-radius:8px}
+.btn_round{height: 32px;border:1px solid #707070;text-decoration: none;padding: 4px 15px;color:#828282;border-radius:10px;vertical-align: middle;}
+.btn_close{display: inline-block;width: 24px;height: 24px;background: url(/pub/resource/images/ic_cancel@3x.png) no-repeat center;background-size: 24px;}
 /* button END*/
 
 /* layout START */
 html.openpop,
 html.openpop body{overflow: hidden;}
-.dim{position: fixed;top:0;left:0;width:100%;height: 100%;background:#000;opacity: 0.5;z-index: 1000;cursor: pointer;}
+.dim{position: fixed;top:0;left:0;width:100%;height: 100%;background:#000;opacity: 0.5;z-index: 100;cursor: pointer;}
 
-.header{position: fixed;width:100%;display: flex;height:100px;align-items: center;box-shadow: 0 3px 6px #d6d6d6;background-color:#fff;z-index: 10;}
-.header .logo{position: absolute;left: 100px;width:60px;height:60px;background: url(../images/logo_symbole@3x.png) no-repeat left center;background-size:60px 60px;}
+.header{position: fixed;width:100%;height:80px;display: flex;align-items: center;box-shadow: 0 3px 6px #d6d6d6;background-color:#fff;z-index: 10;}
+.header .logo{display: none;position: absolute;left: 100px;width:60px;height:60px;background: url(../images/logo_symbole@3x.png) no-repeat left center;background-size:60px 60px;z-index: 120;}
 .header .logo a{display: block;height: 100%;overflow: hidden;text-indent: 101%;white-space: nowrap;}
-.header .nav{position: absolute;left:50%;margin-left: -428px;width:856px;}
-.header .nav ul{overflow: hidden;}
-.header .nav ul li{display:inline-block;text-decoration: none;}
-.header .nav ul li + li{margin-left: 40px;}
-.header .nav ul li a{color:#828282;font-size: 24px;}
+.header .tit_header{font-size: 24px;line-height: 36px;margin-left: 20px;align-self: flex-end; padding-bottom: 15px;}
+
+.header .rightarea{padding: 40px 20px 20px;}
+.header .rightarea .btnbox{position: absolute;bottom: 0; left: 0; right: 0;}
+.header .rightarea .btnbox .btn_round{display: block;border: 0;border-top: 1px solid #ebebeb;height: 50px;line-height: 50px;padding: 0 20px;font-size: 20px;border-radius: 0;box-sizing: border-box;}
+.header .rightarea .flexh_center{display: flex;margin-top:30px;vertical-align: middle;}
+.header .rightarea .flexh_center .ic_platinum{position: relative;}
+.header .rightarea .flexh_center .ic_platinum::after{content: '';position: absolute;right: -4px;bottom: -4px;width: 20px;height: 20px;background: url(/pub/resource/images/ic_tier@3x.png) no-repeat center;background-size: 20px;}
+.header .rightarea .flexh_center img{width:45px;height: 45px;}
+.header .rightarea .flexh_center .infobox .txt + .txt_sub{margin-left: 15px;}
+
+.header .aside{position: fixed; right: -100%; top: 0;bottom:0;width: 70%; background: #fff; display: block; overflow: hidden;transition: 0.5s all;z-index: 110;}
+.openpop .header .aside{right:0}
+
+.header .list_set{position: relative;margin-left: auto;margin-right: 30px;z-index:1;}
+.header .list_set li{display: inline-block;width:30px;height: 30px;overflow: hidden;text-indent: 101%;white-space: nowrap;}
+.header .list_set li + li{margin-left: 10px;}
+.header .list_set li a{display: block;height: 30px;}
+.header .list_set .menu_alert{position: relative;background: url(/pub/resource/images/ic_alert@3x.png) no-repeat center;background-size: 30px;}
+.header .list_set .menu_alert span{position: absolute;top:2px;right:0;display: inline-block;width:12px;height: 12px;border:1px solid #fff;border-radius: 50%;background: #ff4040;text-indent: 0;color:#fff;font-size: 10px; text-align: center; line-height: 12px;}
+.header .list_set .menu_set{background: url(/pub/resource/images/ic_ssetting@3x.png) no-repeat center;background-size: 30px;}
+.header .list_set .menu_ham{background: url(/pub/resource/images/ic_menu@3x.png) no-repeat center;background-size: 30px;}
+
+.header .nav{position: relative; width: auto; left: auto; margin: 0;padding-top: 15px;border-top:2px solid #ebebeb}
+.header .nav ul li{display: block;}
+.header .nav ul li + li{margin: 0;border-top:1px solid #ebebeb;}
+.header .nav ul li a{display: block;height: 50px;padding: 0 20px;line-height: 50px;font-size: 20px;color:#828282}
 .header .nav ul li.on a{color: #2f2fd3;font-weight:bold;}
-.header .rightarea{margin-left: auto}
-.header .rightarea button,
-.header .rightarea a{height: 32px;border:1px solid #707070;text-decoration: none;padding: 4px 15px;color:#828282;border-radius:10px;}
 
 .contwrap{position: relative;min-height: calc(100vh - 100px);padding-top:100px;text-align: center;/*overflow: hidden;*/}
 .container{position: relative;display: inline-block;margin-top:50px}
-.content{display: inline-block;width:856px;text-align:left;}
-.content.wide{width:932px;}
-.content.sideline{width:280px;}
-.content.sideuser{width:400px;}
+.container{text-align: left;}
+.container.home .content.wide{display:none}
 
-.content .titlearea{height:50px;padding: 10px;box-sizing: border-box}
+.content .titlearea{height:50px;margin-bottom: 5px;padding: 10px;box-sizing: border-box}
 .content .titlearea h3{font-size:20px;line-height: 29px;font-weight: bold}
 
 .footer{height: 200px;background: #ebebeb;margin-top: 50px;}
@@ -77,7 +96,7 @@ html.openpop body{overflow: hidden;}
 .listbox.position li .infobox .txt{display: inline-block;}
 .listbox.position li .infobox .txt_sub{display: inline-block;}
 
-.listbox.champion li{width:300px;}
+.listbox.champion li{width:276px;}
 .listbox.champion li .infobox .txt{margin-bottom:2px;}
 
 .list_slide{overflow: hidden;background: #fff;}
@@ -118,6 +137,14 @@ html.openpop body{overflow: hidden;}
 
 .box{overflow: hidden;}
 .box + .box{margin-top:40px;}
+
+.flexh_center{display: flex;flex-direction: row;align-items: center;}
+.infobox{display: inline-block;flex:1;margin-left: 15px;vertical-align: top;}
+.infobox .tit{font-size: 16px;font-weight: bold;margin-bottom: 10px;vertical-align: middle;}
+.infobox .txt{font-size:14px;vertical-align: middle;}
+.infobox .txt_sub{font-size: 14px;vertical-align: middle;}
+.infobox .horizon{display: inline-block;}
+.infobox .horizon + span{display: inline-block;margin-left: 5px;padding-left: 5px;border-left: 1px solid #828282;}
 /* layout END */
 
 /* componant START */
@@ -216,10 +243,51 @@ p.btn_ipt{line-height: 48px;}
  }
 /* 데스크탑에서 사용될 스타일을 여기에 작성합니다. */
  @media screen and (min-width: 1280px) {
-    .formwrap{width:560px;min-height:800px;margin:60px auto;padding:40px;}
+	
+	.header{height: 100px;}
+	.header .logo{display: block;}
+	.header .tit_header{display: none}
+	.header .list_set{display: none;}
+	.header .aside{display: flex;align-items: center;width:100%;height: 100%;position: relative; right: 0;}
+	.header .nav{padding-top: 0;border-top: 0;position: absolute;left:50%;margin-left: -428px;width:856px;}
+	.header .nav ul{overflow: hidden;}
+	.header .nav ul li{display:inline-block;text-decoration: none;}
+	.header .nav ul li + li{margin-left: 40px;border-top: 0;}
+	.header .nav ul li a{padding: 0;height: auto;color:#828282;font-size: 24px;line-height: inherit;}
+	.header .rightarea{position: relative;margin-left: auto;margin-right: 30px;padding: 0;z-index:1;}
+	.header .rightarea .btnbox{display: inline-block;position: static;}
+	.header .rightarea .btnbox .btn_round{display: inline-block;height: 32px; border: 1px solid #707070; text-decoration: none; padding: 4px 15px; color: #828282; border-radius: 10px; vertical-align: middle;line-height: inherit;font-size: 16px;line-height: 20px;}
+	.header .rightarea .btn_close{display: none;}
+	.header .rightarea .flexh_center{display: inline-flex;margin: 0 0 0 40px;vertical-align: middle;}
+	.header .rightarea .flexh_center img{width:54px;height: 54px;}
+	.header .rightarea .flexh_center .ic_platinum::after{display: none;}
+	.header .rightarea .flexh_center .infobox .tit{color:#828282;font-weight: normal;margin: 0;}
+	.header .rightarea .flexh_center .infobox span{display: none;}
+
+	.container{text-align: center;}
+	.container.home .content.wide{display:inline-block;}
+
+	.content{display: inline-block;width:856px;text-align:left;}
+	.content.wide{width:932px;}
+	.content.sideline{width:280px;}
+	.content.sideuser{width:400px;}
+
+
+	.formwrap{width:560px;min-height:800px;margin:60px auto;padding:40px;}
     .btnfixed .btnarea{position: absolute;bottom: 40px;left: 40px;right:40px;}
-    .btnfixed .btn_blue{border-radius:8px}
+	.btnfixed .btn_blue{border-radius:8px}
+	
  }
+@media screen and (max-width: 1560px) {
+	.header .logo{left:20px}
+   	.home.container{margin-left: 200px;}
+   	.home .ad_right{display: none;}
+}
+@media screen and (max-width: 1360px) {
+	.home.container{margin-left: auto;}
+	.home .ad_left{display: none;}
+ }
+  
  
 
 

@@ -32,14 +32,25 @@ $(window).ready(function(){
  
   // 팝업 띄우기
 openPopup = function(id, url, options){
-	$('html').addClass("openpop");
-	$('body').append("<div class='dim'></div>");
+  $('html').addClass("openpop");
+  if('.header a'){
+    $('.header').append("<div class='dim'></div>");
+  }else{
+    $('body').append("<div class='dim'></div>");
+  }
+	
 	$('#popTest').show();
 
 	$(".dim").on("click", function(){
 		$(this).remove();
 		$('html').removeClass("openpop");
 		$('#popTest').hide();
-	});
+  });
+
+  // menu close
+  $('.header .btn_close').on("click", function(){
+    $('.header .dim').remove();
+    $('html').removeClass("openpop");
+  });
 }
 

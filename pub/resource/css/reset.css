@@ -28,6 +28,7 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+a{text-decoration: none;}
 button{border:none;border-radius:0;cursor: pointer;background-color: transparent}
 html, body{height:100%;}
 body {
