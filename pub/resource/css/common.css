@@ -198,8 +198,8 @@ select option{height:34px;padding:3px}
 .ipt_file > input[type="file"]{display: none;}
 .ipt_file > label{display: inline-block;padding:0 11px;line-height: 50px;cursor: pointer;}
 
-.btn_ipt{padding:0 25px;background-color: #fff}
-p.btn_ipt{line-height: 48px;}
+.btn_ipt{min-width:80px;padding:0 10px;background-color: #fff}
+p.btn_ipt{line-height: 48px;text-align: center;box-sizing: border-box;}
 
 .piechart_wrap{position: relative;display: inline-block;}
 .piechart {position: relative;display:inline-block;width: 64px;height: 64px;border-radius: 50%;transition: 0.3s;z-index:1;}

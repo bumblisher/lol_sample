@@ -63,6 +63,10 @@ select::-ms-expand {
     display: none;
 }
 
+/* ios input */
+input[type="text"],
+input[type="password"]{-webkit-appearance: none;}
+
 .mt5{margin-top: 5px;}
 .mt20{margin-top: 20px;}
 .mt50{margin-top:50px}
