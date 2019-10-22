@@ -40,7 +40,7 @@ openPopup = function(id, url, options){
   }
 	
 	$('#popTest').show();
-
+ 
 	$(".dim").on("click", function(){
 		$(this).remove();
 		$('html').removeClass("openpop");
