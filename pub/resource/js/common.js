@@ -33,7 +33,9 @@ $(window).ready(function(){
   // 팝업 띄우기
 openPopup = function(id, url, options){
   $('html').addClass("openpop");
-  if('.header a'){
+  var dimFlag = $('body').find(".header").length;
+
+  if(dimFlag){
     $('.header').append("<div class='dim'></div>");
   }else{
     $('body').append("<div class='dim'></div>");

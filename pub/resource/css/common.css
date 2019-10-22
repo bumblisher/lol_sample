@@ -79,7 +79,7 @@ html.openpop body{overflow: hidden;}
 
 .contwrap{position: relative;min-height: calc(100vh - 100px);text-align: center;/*overflow: hidden;*/}
 .container{position: relative;display: block;margin-top:50px;padding: 20px;box-sizing: border-box;text-align: left;}
-.container.form{margin-top:0;padding: 70px 0;}
+.container.form{margin-top:0;padding: 80px 0 0;}
 .container.home .content.wide{display:none}
 .container.home .content.sideline{margin-top: 30px;}
 /* .container{position: relative;display: inline-block;margin-top:50px;}
@@ -138,7 +138,7 @@ html.openpop body{overflow: hidden;}
 .flexy{display: flex;flex-direction: column}
 
 .btnarea{display: flex;}
-.btnarea .btn_cm{flex:1;border-top:1px solid #ebebeb}
+.btnarea .btn_cm{flex:1;border-top:1px solid #ebebeb;background-color: #fff;}
 
 .flexx + .txt_input_sub,
 .rec_input + .txt_input_sub,
@@ -243,7 +243,7 @@ p.btn_ipt{line-height: 48px;}
 /* form END */
 
 /* popup START */
-.popwrap{display:none;width: 400px;min-height: 230px;background: #fff;position: absolute;left: 50%;top: 50%;transform: translate(-50%, -50%);border-radius: 20px;z-index: 1001;box-sizing: border-box;box-shadow: 0 12px 18px 0 rgba(0, 0, 0, 0.16);}
+.popwrap{display:none;width: 400px;min-height: 230px;background: #fff;position: absolute;left: 50%;top: 50%;transform: translate(-50%, -50%);border-radius: 20px;z-index: 1001;box-sizing: border-box;box-shadow: 0 12px 18px 0 rgba(0, 0, 0, 0.16);overflow: hidden;}
 .popwrap.alert{text-align: center;padding: 30px 20px}
 .popwrap .tit_pop{margin-bottom: 20px;line-height: 29px;font-size: 20px;font-weight: bold;}
 .popwrap .txt_pop{line-height: 28px;color: #828282;}
@@ -258,8 +258,7 @@ p.btn_ipt{line-height: 48px;}
 /* 테블릿에서 사용될 스타일을 여기에 작성합니다. */
 @media screen and (min-width: 769px) {
 
-	.container{display: inline-block;}
-	.container.form{margin-top:0;padding: 120px 0;}
+	.container.home{display: inline-block;}
 	.content > .box{border-top:0;padding: 0 10px;}
 	
 	.piechart {position: relative;display:inline-block;width: 100px;height: 100px;border-radius: 50%;transition: 0.3s;z-index:1;}
@@ -310,9 +309,9 @@ p.btn_ipt{line-height: 48px;}
 	.header_sub .flexh_center .ico_user img{width:64px;height: 64px;}
 	.header_sub .flexh_center .infobox{text-align: left;margin: 0 0 0 15px;}
 
-	.container{text-align: center;}
+	.container.home{text-align: center;}
 	.container.home .content.wide{display:inline-block;}
-	.container.form{margin-top:0;padding: 160px 0;}
+	.container.form{margin-top:0;padding: 160px 0 0;}
 
 	.content{display: inline-block;width:856px;text-align:left;}
 	.content.wide{width:932px;}
