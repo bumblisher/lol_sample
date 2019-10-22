@@ -6,27 +6,60 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="resource/css/reset.css">
     <link rel="stylesheet" href="resource/css/common.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="resource/js/common.js"></script>
     <title>gameover</title>
 </head>
 <body class="bg_gray">
     <div class="wrap">
-        <div class="header">
-            <h1 class="logo"><a href="/pub/index.html">LOL</a></h1>
-            <div class="nav">
-                <ul>
-                    <li class="on"><a href="#">홈</a></li>
-                    <li><a href="#">찾기</a></li>
-                    <li><a href="#">클럽</a></li>
-                    <li><a href="#">고수상점</a></li>
-                    <li><a href="#">공지사항</a></li>
-                </ul>
-            </div>
-            <div class="rightarea">
-                <a href="#">로그인</a>
-                <a href="/pub/signup.html">회원가입</a>
-                <button>로그아웃</button>
-            </div>
-        </div>
+            <div class="header">
+                    <h1 class="logo"><a href="/pub/index.html">LOL</a></h1>
+                    <h2 class="tit_header">홈</h2>
+                    
+                    <ul class="list_set">
+                        <li class="menu_alert"><a href="#">알림<span>4</span></a></li>
+                        <li class="menu_set"><a href="#">설정</a></li>
+                        <li class="menu_ham"><a href="#" id="openPopup" onclick="openPopup()">메뉴</a></li>
+                    </ul>
+                    <div class="aside">
+                        <div class="rightarea">
+                            <button class="btn_close"></button>
+                            <div class="btnbox">
+                                <a href="#" class="btn_round">로그인</a>
+                                <a href="/pub/signup.html" class="btn_round">회원가입</a>
+                                <button style="display: none;" class="btn_round">로그아웃</button>
+                            </div>
+                            <div class="flexh_center">
+                                <div class="ico_user platinum"><img src="/pub/resource/images/ico_user@3x.png" alt=""></div>
+                                <div class="infobox">
+                                    <p class="tit">Grizzle_bb</p>
+                                    <span class="txt">Platinum</span>
+                                    <span class="txt_sub">21LP</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="nav">
+                            <ul>
+                                <li class="on"><a href="#">홈</a></li>
+                                <li><a href="#">찾기</a></li>
+                                <li><a href="#">클럽</a></li>
+                                <li><a href="#">고수상점</a></li>
+                                <li><a href="#">공지사항</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="header_sub">
+                    <button class="btn_add"></button>
+                    <div class="flexh_center">
+                        <div class="ico_user platinum"><img src="/pub/resource/images/ico_user@3x.png" alt=""></div>
+                        <div class="infobox">
+                            <p class="tit">Grizzle_bb</p>
+                            <span class="txt">Platinum</span>
+                            <span class="txt_sub">21LP</span>
+                        </div>
+                    </div>
+                </div> -->
         <div class="contwrap">
             <div class="formwrap">
                 <div class="titlearea">

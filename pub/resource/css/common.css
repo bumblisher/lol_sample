@@ -33,7 +33,7 @@ html.openpop,
 html.openpop body{overflow: hidden;}
 .dim{position: fixed;top:0;left:0;width:100%;height: 100%;background:#000;opacity: 0.5;z-index: 100;cursor: pointer;}
 
-.header{position: fixed;width:100%;height:80px;display: flex;align-items: center;box-shadow: 0 3px 6px #d6d6d6;background-color:#fff;z-index: 10;}
+.header{position: fixed;width:100%;height:80px;display: flex;align-items: center;box-shadow: 0 3px 6px #d6d6d6;background-color:#fff;z-index: 100;}
 .header .logo{display: none;position: absolute;left: 100px;width:60px;height:60px;background: url(../images/logo_symbole@3x.png) no-repeat left center;background-size:60px 60px;z-index: 120;}
 .header .logo a{display: block;height: 100%;overflow: hidden;text-indent: 101%;white-space: nowrap;}
 .header .tit_header{font-size: 24px;line-height: 36px;margin-left: 20px;align-self: flex-end; padding-bottom: 15px;}
@@ -65,17 +65,25 @@ html.openpop body{overflow: hidden;}
 .header .nav ul li a{display: block;height: 50px;padding: 0 20px;line-height: 50px;font-size: 20px;color:#828282}
 .header .nav ul li.on a{color: #2f2fd3;font-weight:bold;}
 
-.header_sub{}
+.header_sub{padding-top: 130px;text-align: center;}
 .header_sub .ico_user{position: relative;}
 .header_sub .ico_user.platinum::after{content: '';position: absolute;right: -6px;bottom: -6px;width: 30px;height: 30px;background: url(/pub/resource/images/ic_tier@3x.png) no-repeat center;background-size: 30px;}
 .header_sub .infobox .tit{font-size: 20px;}
 .header_sub .infobox span{font-size: 16px;}
 .header_sub .infobox span + span{margin-left: 5px;}
+.header_sub .flexh_center{display: inline-block;left:auto;margin:0;text-align: center;}
+.header_sub .flexh_center .ico_user{display: block;width:auto;height: 64px;}
+.header_sub .flexh_center .ico_user img{width:64px;height: 64px;}
+.header_sub .infobox{text-align: center;margin: 18px 0 0;}
 
 .contwrap{position: relative;min-height: calc(100vh - 100px);text-align: center;/*overflow: hidden;*/}
-.container{position: relative;display: inline-block;margin-top:50px}
+.container{position: relative;display: inline-block;margin-top:50px;}
 .container{text-align: left;}
 .container.home .content.wide{display:none}
+/* .container{position: relative;display: inline-block;margin-top:50px;}
+.container{text-align: left;}
+.container.home .content.wide{display:none} */
+
 
 .content .titlearea{height:50px;margin-bottom: 5px;padding: 10px;box-sizing: border-box}
 .content .titlearea h3{font-size:20px;line-height: 29px;font-weight: bold}
@@ -103,7 +111,7 @@ html.openpop body{overflow: hidden;}
 .listbox.position li .infobox .txt{display: inline-block;}
 .listbox.position li .infobox .txt_sub{display: inline-block;}
 
-.listbox.champion li{width:276px;}
+
 .listbox.champion li .infobox .txt{margin-bottom:2px;}
 
 .list_slide{overflow: hidden;background: #fff;}
@@ -119,6 +127,7 @@ html.openpop body{overflow: hidden;}
 .list_slide > li .btn_slide.sup{background: #fff url(/pub/resource/images/ic_position_support@3x.png) no-repeat left 20px center;background-size:40px;}
 .list_slide > li .listbox{display: none;border-top: 2px solid #ebebeb;;padding: 15px 10px;}
 .list_slide > li .listbox li + li{margin-top: 30px;}
+.list_slide .listbox.champion li{display:block;}
 .flexx{display: flex;flex-direction: row}
 .flexx > input[type="text"],
 .flexx > input[type="password"]{flex: 1;}
@@ -271,12 +280,12 @@ p.btn_ipt{line-height: 48px;}
 	.header .rightarea .flexh_center .infobox .tit{color:#828282;font-weight: normal;margin: 0;}
 	.header .rightarea .flexh_center .infobox span{display: none;}
 
-	.header_sub{width: 100%;display: flex; align-items: center;height: 100px;padding-top: 100px;}
+	.header_sub{width: 100%;display: flex; align-items: center;height: 100px;padding-top: 100px;text-align: left;}
 	.header_sub .btn_add{position: absolute;left: 100px;width:56px;height:56px;background: url(../images/btn_add@3x.png) no-repeat center;background-size:56px;}
-	.header_sub .flexh_center{position: absolute;width:856px;left:50%;padding-top: 0;border-top: 0;margin-left: -428px;}
-	.header_sub .flexh_center .ico_user{width:64px;height: 64px;}
-	.header_sub .flexh_center .ico_user img{width:100%;height: 100%;}
-
+	.header_sub .flexh_center{position: absolute;display: flex;width:856px;left:50%;padding-top: 0;border-top: 0;margin-left: -428px;}
+	.header_sub .flexh_center .ico_user{display: inline-block;width:64px;height: 64px;}
+	.header_sub .flexh_center .ico_user img{width:64px;height: 64px;}
+	.header_sub .flexh_center .infobox{text-align: left;margin: 0 0 0 15px;}
 
 	.container{text-align: center;}
 	.container.home .content.wide{display:inline-block;}
@@ -286,6 +295,7 @@ p.btn_ipt{line-height: 48px;}
 	.content.sideline{width:280px;}
 	.content.sideuser{width:400px;}
 
+	.listbox.champion li{display:inline-block;width:276px;}
 
 	.formwrap{width:560px;min-height:800px;margin:60px auto;padding:40px;}
     .btnfixed .btnarea{position: absolute;bottom: 40px;left: 40px;right:40px;}
