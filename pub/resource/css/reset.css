@@ -67,6 +67,12 @@ select::-ms-expand {
 input[type="text"],
 input[type="password"]{-webkit-appearance: none;}
 
-.mt5{margin-top: 5px;}
-.mt20{margin-top: 20px;}
-.mt50{margin-top:50px}
+
+
+.mt5{margin-top: 5px !important;}
+.mt20{margin-top: 20px !important;}
+.mt30{margin-top: 30px !important;}
+.mt50{margin-top:50px !important}
+
+.fwb{font-weight: bold !important;}
+.fwn{font-weight: normal !important;}

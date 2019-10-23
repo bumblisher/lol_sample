@@ -23,7 +23,7 @@
 
 
 .btn_cm{height: 50px;color:#828282;}
-.btn_blue{display:block;width:100%;height: 50px;background-color: #2f2fd3;color:#fff;font-weight: bold;border-radius:8px}
+.btn_blue{display:inline-block;width:100%;height: 50px;background-color: #2f2fd3;color:#fff;font-weight: bold;border-radius:8px}
 .btn_round{height: 32px;border:1px solid #707070;text-decoration: none;padding: 4px 15px;color:#828282;border-radius:10px;vertical-align: middle;}
 .btn_close{display: inline-block;width: 24px;height: 24px;background: url(/pub/resource/images/ic_cancel@3x.png) no-repeat center;background-size: 24px;}
 /* button END*/
@@ -220,10 +220,10 @@ p.btn_ipt{line-height: 48px;text-align: center;box-sizing: border-box;}
 
 
 /* form START */
-.formwrap{position: relative;padding:20px;margin:0 auto;background-color:#fff;box-sizing:border-box;text-align: left}
+.formwrap{position: relative;padding:20px;margin:0 auto;background-color:#fff;box-sizing:border-box;text-align: left;box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);}
 .formwrap .titlearea{display: flex;align-items:center;height: 60px;}
 .formwrap .titlearea h2{line-height: 60px;font-size:24px;padding-left:80px;background: url(../images/logo_symbole@3x.png) no-repeat left center;background-size:60px 60px;}
-.formwrap .titlearea h3{line-height: 30px;font-size: 20px}
+.formwrap .titlearea h3{line-height: 30px;font-size: 20px;font-weight: bold;}
 .formwrap .contarea{margin-top: 30px;padding-top: 30px;border-top: 1px solid #c3c3c3}
 .formwrap .contarea .rec_btn_snsLogin + .rec_btn_snsLogin,
 .formwrap .contarea > .flexx + .flexx{margin-top: 15px}
@@ -237,8 +237,24 @@ p.btn_ipt{line-height: 48px;text-align: center;box-sizing: border-box;}
 .formwrap .contarea .txt_cm + .txt_sub{margin-top: 30px;}
 .formwrap .contarea .txt_sub + .rec_input_tit{margin-top: 50px;}
 .formwrap .contarea + .btnarea{margin-top: 15px;}
+
+
+.formwrap.club .contarea{padding-top: 10px;}
+.formwrap.club .titlearea h2{padding: 0;background: none;}
+.formwrap.club .rec_input_tit{color:#000;margin:40px 0 10px;}
+.formwrap.club .flexx{align-items: center;}
+.formwrap.club .flexx .rec_input_tit{margin:0 10px 0 0;}
+.formwrap.club .flexx.link .rec_input_tit{min-width:80px;}
+.grp_img_club{margin:7px 0 0 -5px;}
+.grp_img_club li{display: inline-block;width: calc(50vw - 30px); height: 34vw;margin: 7px 5px;border-radius: 8px; overflow: hidden;}
+.grp_img_club li img{width:100%}
+.grp_img_club li:last-child img{display: none;}
+.grp_img_club li button{display: none;width: 100%;height: 100%;background: #f7f7f7 url(/pub/resource/images/ic_plus@3x.png) no-repeat center;background-size: 24px;border-radius: 8px; overflow: hidden;}
+.grp_img_club li:last-child button{display: block;}
+
+
 .btnfixed{height: 50px;margin-top:50px}
-.btnfixed .btnarea{position: fixed;bottom: 0px;left: 0px;width:100%;z-index: 10;}
+.btnfixed .btnarea{position: fixed;bottom: 0px;left: 0px;width:100%;z-index: 10;justify-content: center;}
 .btnfixed .btn_blue{border-radius:0}
 /* form END */
 
@@ -277,7 +293,11 @@ p.btn_ipt{line-height: 48px;text-align: center;box-sizing: border-box;}
 
 	.grp_dep02{padding-left:40px}
     .btnfixed .btnarea{position: absolute;bottom: 20px;left: 20px;right:20px;width: auto;}
-    .btnfixed .btn_blue{border-radius:8px}
+	.btnfixed .btn_blue{border-radius:8px}
+	
+	/* club */
+	.grp_img_club li{width:200px; height:160px;margin: 7px 5px;}
+	.flexx.link .rec_input{flex:none;width:50%;margin-left: auto;}
  }
 /* 데스크탑에서 사용될 스타일을 여기에 작성합니다. */
  @media screen and (min-width: 1280px) {
@@ -327,7 +347,10 @@ p.btn_ipt{line-height: 48px;text-align: center;box-sizing: border-box;}
 	.list_slide > li .listbox li + li{margin-top: 30px;}
 
 	.formwrap{width:560px;min-height:800px;padding:40px;}
-    .btnfixed .btnarea{position: absolute;bottom: 40px;left: 40px;right:40px;}
+	.formwrap.club{width:916px;}
+	.formwrap.club .contarea > .flexx + .flexx{margin-top: 30px;}
+	
+	.btnfixed .btnarea{position: absolute;bottom: 40px;left: 40px;right:40px;}
 	.btnfixed .btn_blue{border-radius:8px}
 	
  }
