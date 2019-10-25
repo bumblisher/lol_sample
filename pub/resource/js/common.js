@@ -8,6 +8,10 @@ $(window).ready(function(){
     $('.list_slide .btn_slide').on('click',function(){
 		$(this).toggleClass('on').siblings().stop().slideToggle();
     });
+    $('.select > button').on("click", function(){{
+      $(this).parent().stop().toggleClass("open");
+      $(this).siblings('ul').stop().slideToggle();
+    }})
  });
  
  // 메인 그래프

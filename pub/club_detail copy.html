@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="resource/css/reset.css">
+    <link rel="stylesheet" href="resource/css/common.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="resource/js/common.js"></script>
+    <title>gameover</title>
+</head>
+<body class="">
+    <div class="wrap bg_gray">
+            <div class="header">
+                    <h1 class="logo"><a href="/pub/index.html">LOL</a></h1>
+                    <h2 class="tit_header">클럽</h2>
+                    
+                    <ul class="list_set">
+                        <li class="menu_alert"><a href="#">알림<span>4</span></a></li>
+                        <li class="menu_set"><a href="#">설정</a></li>
+                        <li class="menu_ham"><a href="#" id="openPopup" onclick="openPopup()">메뉴</a></li>
+                    </ul>
+                    <div class="aside">
+                        <div class="rightarea">
+                            <button class="btn_close"></button>
+                            <div class="btnbox">
+                                <a href="#" class="btn_round">로그인</a>
+                                <a href="/pub/signup.html" class="btn_round">회원가입</a>
+                                <button style="display: none;" class="btn_round">로그아웃</button>
+                            </div>
+                            <div class="flexh_center">
+                                <div class="ico_user platinum"><img src="/pub/resource/images/ico_user@3x.png" alt=""></div>
+                                <div class="infobox">
+                                    <p class="tit">Grizzle_bb</p>
+                                    <span class="txt">Platinum</span>
+                                    <span class="txt_sub">21LP</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="nav">
+                            <ul>
+                                <li class="on"><a href="#">홈</a></li>
+                                <li><a href="#">찾기</a></li>
+                                <li><a href="#">클럽</a></li>
+                                <li><a href="#">고수상점</a></li>
+                                <li><a href="#">공지사항</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="header_sub">
+                    <button class="btn_add"></button>
+                    <div class="flexh_center">
+                        <div class="ico_user platinum"><img src="/pub/resource/images/ico_user@3x.png" alt=""></div>
+                        <div class="infobox">
+                            <p class="tit">Grizzle_bb</p>
+                            <span class="txt">Platinum</span>
+                            <span class="txt_sub">21LP</span>
+                        </div>
+                    </div>
+                </div> -->
+        <div class="contwrap">
+            <div class="container form">
+                <div class="formwrap club">
+                    <div class="titlearea">
+                        <h2>클럽만들기</h2>
+                    </div>
+                    <div class="contarea">
+                        <div class="titlearea"><h3>기본정보</h3></div>
+
+                        <p class="rec_input_tit">클럽 이름</p>
+                        <div class="flexx"><input type="text" name="" id="" class="rec_input shadow" placeholder="클럽 이름을 입력해 주세요."></div>
+                        
+                        <p class="rec_input_tit ">클럽 소개</p>
+                        <div class="flexx"><input type="text" name="" id="" class="rec_input shadow" placeholder="클럽에 대해 소개해 주세요."></div>
+                        
+                        <div class="flexx mt30">
+                            <p class="rec_input_tit ">평균 티어</p>
+                            <div class="rightbox">
+                                <select name="" id="">
+                                    <option>아이언</option>
+                                    <option>브론즈</option>
+                                    <option>실버</option>
+                                    <option>골드</option>
+                                    <option>플레티넘</option>
+                                    <option>다이아</option>
+                                    <option>마스터</option>
+                                    <option>챌린저</option>
+                                </select>
+                                <select name="" id="" class="w80">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    <option>6</option>
+                                    <option>7</option>
+                                    <option>8</option>
+                                </select>
+                                <div class="select open">
+                                    <button>브론즈</button>
+                                    <ul>
+                                        <li><button>아이언</button></li>
+                                        <li><button>브론즈</button></li>
+                                        <li><button>실버</button></li>
+                                        <li><button>골드</button></li>
+                                        <li><button>플레티넘</button></li>
+                                        <li><button>다이아</button></li>
+                                        <li><button>마스터</button></li>
+                                        <li><button>챌린저</button></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="contarea">
+                        <div class="titlearea"><h3>상세정보</h3></div>
+                        <p class="rec_input_tit">이미지 첨부</p>
+                        <div class="grp_img_club">
+                            <ul>
+                                <li><button></button><img src="/pub/resource/images/_sample@3x.png" alt=""></li>
+                                <li><button></button><img src="/pub/resource/images/_sample@3x.png" alt=""></li>
+                            </ul>
+                        </div>
+
+                        <div class="flexx mt30"><p class="rec_input_tit fwb">링크 연결</p></div>
+                        <div class="flexx link"><p class="rec_input_tit ">네이버 카페</p><input type="text" name="" id=""  class="rec_input shadow" placeholder="링크를 입력하세요."></div>
+                        <div class="flexx link"><p class="rec_input_tit ">카카오톡</p><input type="text" name="" id=""  class="rec_input shadow" placeholder="링크를 입력하세요."></div>
+                        <div class="flexx link"><p class="rec_input_tit ">디스코드</p><input type="text" name="" id=""  class="rec_input shadow" placeholder="링크를 입력하세요."></div>
+                        <div class="flexx link"><p class="rec_input_tit ">기타</p><input type="text" name="" id=""  class="rec_input shadow" placeholder="링크를 입력하세요."></div>
+                    </div>
+
+                    <div class="btnfixed">
+                        <div class="btnarea">
+                            <button class="btn_blue">저장</button>
+                        </div>  
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <p>footer영역</p>
+        </div>
+    </div>
+</body>
+</html>

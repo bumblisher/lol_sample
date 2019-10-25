@@ -51,7 +51,6 @@ table {
 }
 
 select {
-
     -webkit-appearance: none;  /* 네이티브 외형 감추기 */
     -moz-appearance: none;
     appearance: none;
@@ -73,6 +72,9 @@ input[type="password"]{-webkit-appearance: none;}
 .mt20{margin-top: 20px !important;}
 .mt30{margin-top: 30px !important;}
 .mt50{margin-top:50px !important}
+
+.w80{width: 80px !important;}
+.w150{width: 150px !important;}
 
 .fwb{font-weight: bold !important;}
 .fwn{font-weight: normal !important;}

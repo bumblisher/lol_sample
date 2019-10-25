@@ -82,13 +82,20 @@ html.openpop body{overflow: hidden;}
 .container.form{margin-top:0;padding: 80px 0 0;}
 .container.home .content.wide{display:none}
 .container.home .content.sideline{margin-top: 30px;}
-/* .container{position: relative;display: inline-block;margin-top:50px;}
-.container{text-align: left;}
-.container.home .content.wide{display:none} */
 
 .content > .box{border-top:1px solid #ebebeb}
 .content .titlearea{height:50px;margin-bottom: 5px;padding: 10px 0;box-sizing: border-box}
 .content .titlearea h3{font-size:20px;line-height: 29px;font-weight: bold}
+
+
+.content.form_detail{padding:20px;background-color:#fff;}
+.content.form_detail .titlearea h3{font-size:24px}
+.content.form_detail .txt{font-size: 14px;line-height: 28px;}
+.content.form_detail .flexx{padding: 10px 0;align-items: center;}
+.content.form_detail .rec_input_tit{margin: 0;color:#000;}
+.content.form_detail .contarea + .contarea{margin-top: 30px;padding-top: 30px;border-top: 1px solid #c3c3c3}
+.ico_tier{display: inline-block;width:24px;height: 24px;}
+.ico_tier.dia{background: url(/pub/resource/images/tier_dia@3x.png) no-repeat center;background-size: 24px;}
 
 .footer{height: 200px;background: #ebebeb;margin-top: 50px;}
 .footer p{display: flex;height: 100%;align-items: center;justify-content: center;color:#777;font-size: 24px;}
@@ -137,6 +144,9 @@ html.openpop body{overflow: hidden;}
 .flexx > input[type="password"]{flex: 1;}
 .flexy{display: flex;flex-direction: column}
 
+.rightbox{margin-left:auto;}
+.rightbox > *{vertical-align: middle;}
+
 .btnarea{display: flex;}
 .btnarea .btn_cm{flex:1;border-top:1px solid #ebebeb;background-color: #fff;}
 
@@ -168,9 +178,19 @@ html.openpop body{overflow: hidden;}
 /* layout END */
 
 /* componant START */
-select{width:200px;height:34px;padding:3px;border:1px solid #ccc;border-radius: 6px;box-sizing: border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;}
+select{width:150px;height:34px;padding:3px;border:1px solid #ccc;background: #fff url(/pub/resource/images/btn_down@3x.png) no-repeat right 20px center;background-size: 30px;border-radius: 6px;box-sizing: border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;}
 select option{height:34px;padding:3px}
-.select{}
+select.round{width: 150px; height: 40px; padding: 0px 20px; font-size: 16px; border: 2px solid #ccc; background: #fff url(/pub/resource/images/btn_down@3x.png) no-repeat right 20px center; background-size: 30px; border-radius: 20px; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box;}
+
+.select{position: relative;height: 40px;border:2px solid #c3c3c3;border-radius: 20px;box-sizing: border-box;}
+.select > button{width:100%;height: 100%;padding-left: 20px;text-align: left;box-sizing: border-box;position: relative;z-index: 1;background: #fff url(/pub/resource/images/btn_down@3x.png) no-repeat right 20px center;background-size: 30px;border-radius: 20px;outline: none;}
+.select > ul{position: absolute;top: 17px;left:-2px;right:-2px;border: 2px solid #c3c3c3;border-top:0;background: #fff;border-radius: 0 0 20px 20px;overflow: hidden;}
+.select > ul li{height: 40px;padding: 0 8px;box-sizing: border-box;}
+.select > ul li:first-child{height: 59px;padding-top:20px;}
+.select > ul li button{width:100%;height:100%;text-align: left;border-top:1px solid #ebebeb}
+.select.open{border-radius: 20px 20px 0 0;border-color:#2f2fd3}
+.select.open > ul{top: 36px;border-color:#2f2fd3}
+.select.open > ul li:first-child{height: 40px;padding-top:0;}
 
 .rec_input_tit{margin:20px 0 10px;color:#2f2fd3;}
 .rec_input_tit.req::after{content: '';display: inline-block;width: 6px;height: 6px;margin-left: 10px;background: url(../images/ico_req@3x.png) no-repeat center center;background-size: 6px 6px;vertical-align:4px}
@@ -216,6 +236,23 @@ p.btn_ipt{line-height: 48px;text-align: center;box-sizing: border-box;}
 
 .ico_champ{display: inline-block;width:64px;height: 64px;border:2px solid #ebebeb;padding: 4px;border-radius: 50%;overflow: hidden;box-sizing: border-box;}
 .ico_champ img{display: block;width:100%;}
+
+.list_circlelink{}
+.list_circlelink li{display: inline-block;width:30px;height:30px;border-radius: 15px;}
+.list_circlelink li a{display: block;height: 100%;}
+.list_circlelink li.kakao{background-color: #ffe812;}
+.list_circlelink li.kakao a{background: url(/pub/resoure/images/ic_kakao_solid@3x.png) no-repeat center;background-size:20px;}
+.list_circlelink li.discode{background-color: #7289da;}
+.list_circlelink li.discode a{background: url(/pub/resource/images/ic_discode@3x.png) no-repeat center;background-size:20px;}
+.list_circlelink li.naver{background-color: #03cf5d;}
+.list_circlelink li.naver a{background: url(/pub/resource/images/ic_naver@3x.png) no-repeat center;background-size:20px;}
+
+.list_clubuser{margin-top: 20px;}
+.list_clubuser li span{color: #828282;}
+.list_clubuser li span:first-child{color:#000;font-weight: bold;margin-right: 30px;}
+
+.img_club{}
+.img_club img{width:100%;}
 /* componant END */
 
 
@@ -246,7 +283,7 @@ p.btn_ipt{line-height: 48px;text-align: center;box-sizing: border-box;}
 .formwrap.club .flexx .rec_input_tit{margin:0 10px 0 0;}
 .formwrap.club .flexx.link .rec_input_tit{min-width:80px;}
 .grp_img_club{margin:7px 0 0 -5px;}
-.grp_img_club li{display: inline-block;width: calc(50vw - 30px); height: 34vw;margin: 7px 5px;border-radius: 8px; overflow: hidden;}
+.grp_img_club li{display: inline-block;width: calc(50vw - 38px); height: 34vw;margin: 7px 5px;border-radius: 8px; overflow: hidden;}
 .grp_img_club li img{width:100%}
 .grp_img_club li:last-child img{display: none;}
 .grp_img_club li button{display: none;width: 100%;height: 100%;background: #f7f7f7 url(/pub/resource/images/ic_plus@3x.png) no-repeat center;background-size: 24px;border-radius: 8px; overflow: hidden;}
@@ -349,7 +386,8 @@ p.btn_ipt{line-height: 48px;text-align: center;box-sizing: border-box;}
 	.formwrap{width:560px;min-height:800px;padding:40px;}
 	.formwrap.club{width:916px;}
 	.formwrap.club .contarea > .flexx + .flexx{margin-top: 30px;}
-	
+	.formwrap.club .btnfixed .btn_blue{width:50%}
+
 	.btnfixed .btnarea{position: absolute;bottom: 40px;left: 40px;right:40px;}
 	.btnfixed .btn_blue{border-radius:8px}
 	
