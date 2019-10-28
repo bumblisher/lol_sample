@@ -49,7 +49,7 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-
+textarea{resize: none;display: block;width: 100%;}
 select {
     -webkit-appearance: none;  /* 네이티브 외형 감추기 */
     -moz-appearance: none;

@@ -12,6 +12,11 @@ $(window).ready(function(){
       $(this).parent().stop().toggleClass("open");
       $(this).siblings('ul').stop().slideToggle();
     }})
+
+    // btn_toggle
+    $('.btn_toggle').on('click',function(){
+      $(this).toggleClass('on');
+      });
  });
  
  // 메인 그래프

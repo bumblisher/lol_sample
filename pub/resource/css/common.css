@@ -14,6 +14,13 @@
 .tac{text-align: center;}
 .tal{text-align: left;}
 .tar{text-align: right;}
+
+.cb::after{content:'';display: block;clear: both;}
+
+select{width:150px;height:34px;padding:3px 8px;border:2px solid #ccc;background: #fff url(/pub/resource/images/btn_down@3x.png) no-repeat right 5px center;background-size: 30px;border-radius: 6px;box-sizing: border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;}
+select option{height:34px;padding:3px;font-family: 'Noto Sans KR', sans-serif;}
+
+textarea.rec_input.rec_input.shadow{height:100px}
 /* common END */
 
 /* button START*/
@@ -30,6 +37,12 @@
 .btn_search{display: inline-block;border: 1px solid #ccc;color:#555; border-radius: 6px; padding: 0 10px; background: #fff; margin-left: 10px; box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16); }
 .btn_fliter{width:26px;height: 26px;background: url(/pub/resource/images/ic_filter@3x.png) no-repeat center;background-size: 26px;}
 .btn_write{display: inline-block;width:56px;height: 56px;background: #2f2fd3 url(/pub/resource/images/ic_plus_white@3x.png) no-repeat center;background-size: 40px;border-radius: 50%;box-shadow: 0 6px 8px rgba(0, 0, 0, 0.16);}
+.btn_skip{font-size: 14px;color:#828282;padding: 5px 20px 5px 5px;background: url(/pub/resource/images/check@3x.png) no-repeat right center; background-size: 10px 18px;}
+.btn_toggle{position: relative;width:40px;height: 20px;}
+.btn_toggle span{position: absolute;;display: inline-block;width:20px;height: 20px;background: #c3c3c3;border-radius: 50%;z-index: 1;top:0;left:0;box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);transition: all 0.4s;}
+.btn_toggle::before{content: '';display: block;width:100%;height:14px;position: absolute;top:50%;margin-top:-7px;background: #ebebeb;border-radius: 7px;transition: all 0.4s;}
+.btn_toggle.on span{background: #2f2fd3;left: calc(100% - 20px);}
+.btn_toggle.on::before{background: rgba(47, 47, 211, 0.5);}
 /* button END*/
 
 /* layout START */
@@ -190,9 +203,7 @@ html.openpop body{overflow: hidden;}
 /* layout END */
 
 /* componant START */
-select{width:150px;height:34px;padding:3px;border:1px solid #ccc;background: #fff url(/pub/resource/images/btn_down@3x.png) no-repeat right 20px center;background-size: 30px;border-radius: 6px;box-sizing: border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;}
-select option{height:34px;padding:3px}
-select.round{width: 150px; height: 40px; padding: 0px 20px; font-size: 16px; border: 2px solid #ccc; background: #fff url(/pub/resource/images/btn_down@3x.png) no-repeat right 16px center; background-size: 30px; border-radius: 20px; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box;}
+select.round{width: 150px; height: 40px; padding: 0px 20px; font-size: 16px; border: 2px solid #ccc; background: #fff url(/pub/resource/images/btn_down@3x.png) no-repeat right 10px center; background-size: 30px; border-radius: 20px; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box;}
 
 .select{position: relative;display: inline-block;width:150px;height: 40px;border:2px solid #c3c3c3;border-radius: 20px;box-sizing: border-box;}
 .select > button{width:100%;height: 100%;padding-left: 20px;text-align: left;box-sizing: border-box;position: relative;z-index: 1;background: #fff url(/pub/resource/images/btn_down@3x.png) no-repeat right 20px center;background-size: 30px;border-radius: 20px;outline: none;}
@@ -279,7 +290,11 @@ p.btn_ipt{line-height: 48px;text-align: center;box-sizing: border-box;}
 .grp_search + .list_boxclub{margin-top: 35px;}
 .list_boxclub > li .list_circlelink li + li{margin-left: 7px;}
 
-
+.list_checkbox::after{content:'';display: block;clear: both;}
+.list_checkbox > li{display: inline-block;float: left;margin: 0 5px 5px 0;}
+.list_checkbox > li input[type="checkbox"]{display: none}
+.list_checkbox > li label{display:inline-block;height:40px;border:2px solid #c3c3c3;padding:0 21px;background: #fff;line-height:34px;color: #c3c3c3;cursor: pointer;border-radius: 20px;font-size:14px;box-sizing: border-box;font-weight: bold;transition: 0.2s all;}
+.list_checkbox > li input[type="checkbox"]:checked + label{background: #2f2fd3;border-color: #2f2fd3;color:#fff}
 .img_club img{width:100%;}
 /* componant END */
 
@@ -316,6 +331,25 @@ p.btn_ipt{line-height: 48px;text-align: center;box-sizing: border-box;}
 .grp_img_club li:last-child img{display: none;}
 .grp_img_club li button{display: none;width: 100%;height: 100%;background: #f7f7f7 url(/pub/resource/images/ic_plus@3x.png) no-repeat center;background-size: 24px;border-radius: 8px; overflow: hidden;}
 .grp_img_club li:last-child button{display: block;}
+
+
+.formwrap.find .contarea{padding-top: 10px;}
+.formwrap.find .titlearea{height:70px}
+.formwrap.find .titlearea h2{padding: 0;background: none;}
+.formwrap.find .titlearea h3{font-size:18px}
+.formwrap.find .rec_input_tit:first-child{margin-top: 20px;;}
+.formwrap.find .rec_input_tit{color:#000;margin:40px 0 10px;}
+.formwrap.find .flexx{align-items: center;}
+.formwrap.find .flexx .rec_input_tit{margin:0 10px 0 0;}
+.formwrap.find .flexx.link .rec_input_tit{min-width:80px;}
+.position_map{position: relative;display:block;width:320px;height:320px;margin: 10px auto;background: url(/pub/resource/images/wrap_map@3x.png) no-repeat center;background-size: 320px;}
+.position_map .btn_posi{position: absolute;display:block;width:60px;height:60px;background: #fff;border-radius: 50%;box-shadow: 0 12px 18px 0 rgba(0, 0, 0, 0.16);}
+.position_map .btn_posi.top{top:20px;left:20px;background: #fff url(/pub/resource/images/ic_position_top_bw@3x.png) no-repeat center;background-size: 40px;}
+.position_map .btn_posi.jungle{top:20px;left:130px;background: #fff url(/pub/resource/images/ic_position_jungle_bw@3x.png) no-repeat center;background-size: 40px;}
+.position_map .btn_posi.mid{top:128px;left:130px;background: #fff url(/pub/resource/images/ic_position_mid@3x.png) no-repeat center;background-size: 40px;}
+.position_map .btn_posi.support{top:128px;right:20px;background: #fff url(/pub/resource/images/ic_position_support@3x.png) no-repeat center;background-size: 40px;}
+.position_map .btn_posi.bot{bottom:20px;right:20px;background: #fff url(/pub/resource/images/ic_position_bot_bw@3x.png) no-repeat center;background-size: 40px;}
+
 
 
 .btnfixed{height: 50px;margin-top:50px}
