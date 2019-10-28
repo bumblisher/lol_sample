@@ -22,10 +22,12 @@
 .rec_btn_snsLogin.facebook::before{content:'';display: inline-block;margin: -5px 20px 0 0;width: 27px;height: 27px;background: url(/pub/resource/images/ico_facebook@3x.png) no-repeat center;background-size: 27px;vertical-align: middle;}
 
 
-.btn_cm{height: 50px;color:#828282;}
+.btn_cm{height: 50px;color:#828282;vertical-align: middle;}
 .btn_blue{display:inline-block;width:100%;height: 50px;background-color: #2f2fd3;color:#fff;font-weight: bold;border-radius:8px}
 .btn_round{height: 32px;border:1px solid #707070;text-decoration: none;padding: 4px 15px;color:#828282;border-radius:10px;vertical-align: middle;}
-.btn_close{display: inline-block;width: 24px;height: 24px;background: url(/pub/resource/images/ic_cancel@3x.png) no-repeat center;background-size: 24px;}
+.btn_more{display: inline-block;width: 24px;height: 24px;background: url(/pub/resource/images/ic_more@3x.png) no-repeat center;background-size: 24px;vertical-align: middle;}
+.btn_close{display: inline-block;width: 24px;height: 24px;background: url(/pub/resource/images/ic_cancel@3x.png) no-repeat center;background-size: 24px;vertical-align: middle;}
+.btn_search{display: inline-block;border: 1px solid #ccc; border-radius: 6px; padding: 0 10px; background: #fff; margin-left: 10px; box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16); }
 /* button END*/
 
 /* layout START */
@@ -87,13 +89,19 @@ html.openpop body{overflow: hidden;}
 .content .titlearea{height:50px;margin-bottom: 5px;padding: 10px 0;box-sizing: border-box}
 .content .titlearea h3{font-size:20px;line-height: 29px;font-weight: bold}
 
-
-.content.form_detail{padding:20px;background-color:#fff;}
+.content.form_detail{position: relative;padding:20px;margin:0 auto;background-color:#fff;box-sizing:border-box;text-align: left;box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);}
+.content.form_detail .titlearea{display: flex;align-items:center;}
 .content.form_detail .titlearea h3{font-size:24px}
 .content.form_detail .txt{font-size: 14px;line-height: 28px;}
+.content.form_detail .grp_more{display: none;}
+.content.form_detail .grp_more > *{margin-left: 8px;}
+.content.form_detail .grp_more a{font-size: 14px;vertical-align: middle;color:#828282}
 .content.form_detail .flexx{padding: 10px 0;align-items: center;}
 .content.form_detail .rec_input_tit{margin: 0;color:#000;}
 .content.form_detail .contarea + .contarea{margin-top: 30px;padding-top: 30px;border-top: 1px solid #c3c3c3}
+
+.content.club_find{position: relative;padding:30px 20px 0;margin:0 auto;box-sizing:border-box;text-align: left;}
+
 .ico_tier{display: inline-block;width:24px;height: 24px;}
 .ico_tier.dia{background: url(/pub/resource/images/tier_dia@3x.png) no-repeat center;background-size: 24px;}
 
@@ -180,11 +188,11 @@ html.openpop body{overflow: hidden;}
 /* componant START */
 select{width:150px;height:34px;padding:3px;border:1px solid #ccc;background: #fff url(/pub/resource/images/btn_down@3x.png) no-repeat right 20px center;background-size: 30px;border-radius: 6px;box-sizing: border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;}
 select option{height:34px;padding:3px}
-select.round{width: 150px; height: 40px; padding: 0px 20px; font-size: 16px; border: 2px solid #ccc; background: #fff url(/pub/resource/images/btn_down@3x.png) no-repeat right 20px center; background-size: 30px; border-radius: 20px; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box;}
+select.round{width: 150px; height: 40px; padding: 0px 20px; font-size: 16px; border: 2px solid #ccc; background: #fff url(/pub/resource/images/btn_down@3x.png) no-repeat right 16px center; background-size: 30px; border-radius: 20px; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box;}
 
-.select{position: relative;height: 40px;border:2px solid #c3c3c3;border-radius: 20px;box-sizing: border-box;}
+.select{position: relative;display: inline-block;width:150px;height: 40px;border:2px solid #c3c3c3;border-radius: 20px;box-sizing: border-box;}
 .select > button{width:100%;height: 100%;padding-left: 20px;text-align: left;box-sizing: border-box;position: relative;z-index: 1;background: #fff url(/pub/resource/images/btn_down@3x.png) no-repeat right 20px center;background-size: 30px;border-radius: 20px;outline: none;}
-.select > ul{position: absolute;top: 17px;left:-2px;right:-2px;border: 2px solid #c3c3c3;border-top:0;background: #fff;border-radius: 0 0 20px 20px;overflow: hidden;}
+.select > ul{display: none;position: absolute;top: 17px;left:-2px;right:-2px;border: 2px solid #c3c3c3;border-top:0;background: #fff;border-radius: 0 0 20px 20px;overflow: hidden;}
 .select > ul li{height: 40px;padding: 0 8px;box-sizing: border-box;}
 .select > ul li:first-child{height: 59px;padding-top:20px;}
 .select > ul li button{width:100%;height:100%;text-align: left;border-top:1px solid #ebebeb}
@@ -241,7 +249,7 @@ p.btn_ipt{line-height: 48px;text-align: center;box-sizing: border-box;}
 .list_circlelink li{display: inline-block;width:30px;height:30px;border-radius: 15px;}
 .list_circlelink li a{display: block;height: 100%;}
 .list_circlelink li.kakao{background-color: #ffe812;}
-.list_circlelink li.kakao a{background: url(/pub/resoure/images/ic_kakao_solid@3x.png) no-repeat center;background-size:20px;}
+.list_circlelink li.kakao a{background: url(/pub/resource/images/ic_kakao_solid@3x.png) no-repeat center;background-size:20px;}
 .list_circlelink li.discode{background-color: #7289da;}
 .list_circlelink li.discode a{background: url(/pub/resource/images/ic_discode@3x.png) no-repeat center;background-size:20px;}
 .list_circlelink li.naver{background-color: #03cf5d;}
@@ -251,7 +259,22 @@ p.btn_ipt{line-height: 48px;text-align: center;box-sizing: border-box;}
 .list_clubuser li span{color: #828282;}
 .list_clubuser li span:first-child{color:#000;font-weight: bold;margin-right: 30px;}
 
-.img_club{}
+.grp_search{display:flex;}
+.grp_search .grp_inputsch{flex:1}
+.grp_search .grp_inputsch input[type='text']{width:100%;height:40px;padding: 10px;box-sizing: border-box;}
+.grp_search .grp_inputsch .btn_fliter{position: absolute;}
+.grp_search input{}
+
+.box_club{position: relative;border-radius: 20px; background: #fff; box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);box-sizing: border-box;overflow: hidden;}
+.box_club > a{display: block;color:#000;display: block; color: #000; padding: 20px 20px 10px; height: 100%; box-sizing: border-box;}
+.box_club .tit{font-weight: bold;line-height: 24px;}
+.box_club .ico_tier{position: absolute;right: 15px;top:15px;width:32px;height:32px;box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);border-radius: 16px;}
+.box_club .txt{margin-top: 10px;line-height: 20px;font-size: 12px;}
+.box_club .img_club{margin:20px -20px 10px;}
+.box_club .list_circlelink li + li{margin-left: 7px;}
+.grp_search + .box_club{margin-top: 35px;}
+.box_club + .box_club{margin-top: 30px;}
+
 .img_club img{width:100%;}
 /* componant END */
 
@@ -335,6 +358,7 @@ p.btn_ipt{line-height: 48px;text-align: center;box-sizing: border-box;}
 	/* club */
 	.grp_img_club li{width:200px; height:160px;margin: 7px 5px;}
 	.flexx.link .rec_input{flex:none;width:50%;margin-left: auto;}
+	.content.form_detail .flexx{width:50%}
  }
 /* 데스크탑에서 사용될 스타일을 여기에 작성합니다. */
  @media screen and (min-width: 1280px) {
@@ -387,6 +411,9 @@ p.btn_ipt{line-height: 48px;text-align: center;box-sizing: border-box;}
 	.formwrap.club{width:916px;}
 	.formwrap.club .contarea > .flexx + .flexx{margin-top: 30px;}
 	.formwrap.club .btnfixed .btn_blue{width:50%}
+
+	.content.form_detail{display:block;width:856px}
+
 
 	.btnfixed .btnarea{position: absolute;bottom: 40px;left: 40px;right:40px;}
 	.btnfixed .btn_blue{border-radius:8px}
