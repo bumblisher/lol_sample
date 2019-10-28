@@ -370,19 +370,19 @@ p.btn_ipt{line-height: 48px;text-align: center;box-sizing: border-box;}
 /* 데스크탑에서 사용될 스타일을 여기에 작성합니다. */
  @media screen and (min-width: 1280px) {
 	
-	.header{height: 100px;}
+	/* .header{height: 100px;} */
 	.header .logo{display: block;}
 	.header .tit_header{display: none}
 	.header .list_set{display: none;}
 	.header .aside{display: flex;align-items: center;width:100%;height: 100%;position: relative; right: 0;}
-	.header .nav{position: absolute;width:856px;left:50%;padding-top: 0;border-top: 0;margin-left: -428px;}
+	.header .nav{position: absolute;left:244px;padding-top: 0;border-top: 0;}
 	.header .nav ul{overflow: hidden;}
 	.header .nav ul li{display:inline-block;text-decoration: none;}
 	.header .nav ul li + li{margin-left: 40px;border-top: 0;}
-	.header .nav ul li a{padding: 0;height: auto;color:#828282;font-size: 24px;line-height: inherit;}
+	.header .nav ul li a{padding: 0;height: auto;color:#828282;font-size: 18px;line-height: inherit;}
 	.header .rightarea{position: relative;margin-left: auto;margin-right: 30px;padding: 0;z-index:1;}
 	.header .rightarea .btnbox{display: inline-block;position: static;}
-	.header .rightarea .btnbox .btn_round{display: inline-block;height: 32px; border: 1px solid #707070; text-decoration: none; padding: 4px 15px; color: #828282; border-radius: 10px; vertical-align: middle;line-height: inherit;font-size: 16px;line-height: 20px;}
+	.header .rightarea .btnbox .btn_round{display: inline-block;height: 32px;margin-left: 30px;border: 1px solid #707070; text-decoration: none; padding: 4px 15px; color: #828282; border-radius: 10px; vertical-align: middle;line-height: inherit;font-size: 16px;line-height: 20px;}
 	.header .rightarea .btn_close{display: none;}
 	.header .rightarea .flexh_center{display: inline-flex;margin: 0 0 0 40px;vertical-align: middle;}
 	.header .rightarea .flexh_center img{width:54px;height: 54px;}
