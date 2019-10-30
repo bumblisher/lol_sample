@@ -389,6 +389,16 @@ p.btn_ipt{line-height: 48px;text-align: center;box-sizing: border-box;}
 .formwrap.find .flexx.mob_sp .rightbox{display: flex;padding-top: 10px;}
 .formwrap.find .flexx.mob_sp .radio_btnty{position: absolute;top: 0;right:0;}
 .formwrap.find .flexx.mob_sp select{width:50% !important}
+
+/* 404 */
+.container.form.page404{padding:20px}
+.container.form.page404 .formwrap{border-top:10px solid #2f2fd3;text-align: center;}
+.container.form.page404 .formwrap .contarea{border: 0;}
+.container.form.page404 .formwrap .contarea:first-child{margin-top:0;padding-top: 216px;background: url(/pub/resource/images/bg_404@3x.png) no-repeat top center;background-size:270px;}
+.container.form.page404 .formwrap .contarea:first-child span{display: inline-block;padding-top: 15px;border-top:2px solid #c3c3c3;width:280px;color:#c3c3c3;font-weight: bold;}
+.container.form.page404 .formwrap .contarea .fwb{margin-bottom: 20px;}
+.container.form.page404 .formwrap .btnarea{margin-top:150px;text-align: center;}
+.container.form.page404 .formwrap .btnarea a{display: inline-block;margin: 0 auto;}
 /* 테블릿에서 사용될 스타일을 여기에 작성합니다. */
 @media screen and (min-width: 769px) {
 
@@ -462,6 +472,9 @@ p.btn_ipt{line-height: 48px;text-align: center;box-sizing: border-box;}
 	.container.home{text-align: center;}
 	.container.home .content.wide{display:inline-block;}
 	.container.form{margin-top:0;padding: 160px 0 0;}
+	.container.form.page404{padding: 80px 0;}
+	.container.form.page404 .formwrap{width:856px;min-height: 500px;}
+	
 
 	.content{display: inline-block;width:856px;text-align:left;}
 	.content.wide{width:932px;}
@@ -501,8 +514,7 @@ p.btn_ipt{line-height: 48px;text-align: center;box-sizing: border-box;}
 	.btn_toggle{width:60px;height:32px}
 	.btn_toggle::before{height:20px;margin-top:-10px;border-radius:10px}
 	.btn_toggle span{width:32px;height:32px;}
-	.btn_toggle.on span{left: calc(100% - 30px);}
-
+	.btn_toggle.on span{left: calc(100% - 31px);}
 
 	.btnfixed .btnarea{position: absolute;bottom: 40px;left: 40px;right:40px;z-index: 9;}
 	.btnfixed .btn_blue{border-radius:8px}
