@@ -16,7 +16,15 @@ $(window).ready(function(){
     // btn_toggle
     $('.btn_toggle').on('click',function(){
       $(this).toggleClass('on');
-      });
+    });
+
+    // radio_btnty
+    $('.radio_btnty button').on('click',function(){
+      var radioIdx = $(this).index()*80;
+      $(this).parent().children().removeClass("on");
+      $(this).addClass('on');
+      $(this).parent().children("span").css('left',radioIdx);
+    });
  });
  
  // 메인 그래프
