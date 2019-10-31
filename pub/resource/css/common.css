@@ -46,6 +46,8 @@ textarea.rec_input.rec_input.shadow{height:100px}
 .btn_toggle::before{content: '';display: block;width:100%;height:14px;position: absolute;top:50%;margin-top:-7px;background: #ebebeb;border-radius: 7px;transition: all 0.4s;}
 .btn_toggle.on span{background: #2f2fd3;left: calc(100% - 20px);}
 .btn_toggle.on::before{background: rgba(47, 47, 211, 0.5);}
+
+.btn_cm.posi{color:#2f2fd3;font-weight: bold;}
 /* button END*/
 
 /* layout START */
@@ -326,14 +328,25 @@ p.btn_ipt{line-height: 48px;text-align: center;box-sizing: border-box;}
 .radio_btnty button.on + span{margin-left:-0}
 
 /* 찾기 */
+.list_boxfind > li{color:#000;position: relative;border-radius: 20px;background: #fff; box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);box-sizing: border-box;overflow: hidden;}
 .list_boxfind > li + li{margin-top: 30px;}
-.list_boxfind > li > a{display: block;color:#000;display: block; position: relative;border-radius: 20px;padding:20px 20px 10px;background: #fff; box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);box-sizing: border-box;overflow: hidden;}
 .list_boxfind > li .tit{font-weight: bold;line-height: 24px;}
 .list_boxfind > li .ico_tier{position: absolute;right: 15px;top:15px;width:32px;height:32px;box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);border-radius: 16px;}
 .list_boxfind > li .img_club{height: 150px;margin:20px -20px 10px;overflow: hidden;}
 
+.list_boxfind .flexh_center{display:block;padding:20px;width:100%;box-sizing: border-box;border-bottom:2px solid #ebebeb}
+.list_boxfind .flexx{margin:0 10px;padding:0 10px;height:50px;align-items: center;box-sizing: border-box;}
+.list_boxfind .flexx + .flexx{border-top:1px solid #ebebeb}
+.list_boxfind .flexx .ico_position{width:24px;height:24px;background-size: 24px !important;border-width: 1px;}
+.list_boxfind .flexx .rec_input_tit {margin: 0 10px 0 0;color:#000}
+
+.box_profile{border-top:2px solid #ebebeb;padding: 10px;}
+.box_profile > li{display:inline-flex;width:50%;padding:10px;float:left;box-sizing: border-box;font-size:12px}
+.box_profile > li span:last-child{margin-left:auto;color:#828282}
+
+.list_boxfind .btnarea .btn_cm{border-top:2px solid #ebebeb}
+
 .grp_search + .list_boxfind{margin-top: 35px;}
-.list_boxfind > li .list_circlelink li + li{margin-left: 7px;}
 
 /* componant END */
 
