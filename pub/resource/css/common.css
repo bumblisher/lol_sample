@@ -97,8 +97,28 @@ html.openpop body{overflow: hidden;}
 .header_sub .flexh_center .ico_user img{width:64px;height: 64px;}
 .header_sub .infobox{text-align: center;margin: 18px 0 0;}
 
+/* ico_user */
+.content{padding-top: 130px;text-align: center;}
+.content .ico_user{position: relative;}
+.content .ico_user.platinum::after{content: '';position: absolute;right: 50%;bottom: -6px;margin-right: -40px;width: 30px;height: 30px;background: url(/pub/resource/images/ic_tier@3x.png) no-repeat center;background-size: 30px;}
+.content .infobox .tit{font-size: 20px;}
+.content .infobox span{font-size: 16px;}
+.content .infobox .txt{font-weight: bold;}
+.content .infobox span + span{margin-left: 5px;}
+.content .flexh_center{display: inline-block;left:auto;margin:0;text-align: center;}
+.content .flexh_center .ico_user{display: block;width:auto;height: 64px;}
+.content .flexh_center .ico_user img{width:64px;height: 64px;}
+.content .infobox{text-align: center;margin: 18px 0 0;}
+
+
+.footer{padding: 50px 100px;background: #4e4e4e;margin-top:100px;box-sizing: border-box;text-align: center;}
+.footer .logo_footer{display: inline-block;width:168px;height:60px;background: url(/pub/resource/images/logo_footer@3x.png) no-repeat center;background-size: 168px;}
+.footer .logo_footer a{display: block;height: 100%;overflow: hidden;text-indent: 101%;white-space: nowrap;}
+.footer .logo_footer + p{margin-top: 10px;font-size: 12px;color:#fff;}
+.footer .footer_right{display:none}
+
 .contwrap{position: relative;min-height: calc(100vh - 100px);text-align: center;/*overflow: hidden;*/}
-.container{position: relative;display: block;margin-top:50px;padding: 20px;box-sizing: border-box;text-align: left;}
+.container{position: relative;display: block;padding: 70px 20px 20px;box-sizing: border-box;text-align: left;}
 .container.form{margin-top:0;padding: 80px 0 0;}
 .container.home .content.wide{display:none}
 .container.home .content.sideline{margin-top: 30px;}
@@ -125,8 +145,6 @@ html.openpop body{overflow: hidden;}
 .ico_tier{display: inline-block;width:24px;height: 24px;}
 .ico_tier.dia{background: url(/pub/resource/images/tier_dia@3x.png) no-repeat center;background-size: 24px;}
 
-.footer{height: 200px;background: #ebebeb;margin-top: 50px;}
-.footer p{display: flex;height: 100%;align-items: center;justify-content: center;color:#777;font-size: 24px;}
 
 .divistion > .content{vertical-align: top;}
 
@@ -302,15 +320,26 @@ p.btn_ipt{line-height: 48px;text-align: center;box-sizing: border-box;}
 
 .radio_btnty{position: relative;display: inline-flex;height: 40px;border: 2px solid #c3c3c3;box-sizing: border-box;border-radius:20px;}
 .radio_btnty button{position: relative;width:80px;height: 100%;z-index: 1;font-size: 14px;color:#c3c3c3;font-weight: bold;transition:all 0.4s}
-.radio_btnty button:first-child{text-indent:-2px}
+.radio_btnty button:last-of-type{text-indent:2px}
 .radio_btnty button.on{color:#fff}
 .radio_btnty span{position: absolute; width: 82px; height: 40px; margin-left:-2px;background: #2f2fd3; top: -2px; left: 0px;border-radius: 20px;transition:all 0.4s;box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);}
 .radio_btnty button.on + span{margin-left:-0}
+
+/* 찾기 */
+.list_boxfind > li + li{margin-top: 30px;}
+.list_boxfind > li > a{display: block;color:#000;display: block; position: relative;border-radius: 20px;padding:20px 20px 10px;background: #fff; box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);box-sizing: border-box;overflow: hidden;}
+.list_boxfind > li .tit{font-weight: bold;line-height: 24px;}
+.list_boxfind > li .ico_tier{position: absolute;right: 15px;top:15px;width:32px;height:32px;box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);border-radius: 16px;}
+.list_boxfind > li .img_club{height: 150px;margin:20px -20px 10px;overflow: hidden;}
+
+.grp_search + .list_boxfind{margin-top: 35px;}
+.list_boxfind > li .list_circlelink li + li{margin-left: 7px;}
+
 /* componant END */
 
 
 /* form START */
-.formwrap{position: relative;padding:20px;margin:0 auto;background-color:#fff;box-sizing:border-box;text-align: left;box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);}
+.formwrap{position: relative;padding:20px;margin:0 auto;background-color:#fff;box-sizing:border-box;text-align: left;}
 .formwrap .titlearea{display: flex;align-items:center;height: 60px;}
 .formwrap .titlearea h2{line-height: 60px;font-size:24px;padding-left:80px;background: url(../images/logo_symbole@3x.png) no-repeat left center;background-size:60px 60px;}
 .formwrap .titlearea h3{line-height: 30px;font-size: 20px;font-weight: bold;}
@@ -355,6 +384,9 @@ p.btn_ipt{line-height: 48px;text-align: center;box-sizing: border-box;}
 .formwrap.find .flexx .rec_input_tit{margin:0 10px 0 0;}
 .formwrap.find .flexx.link .rec_input_tit{min-width:70px;}
 .formwrap.find .flexx > .rightbox > * + *{margin-left:7px}
+.formwrap.find .contarea.set::after{content: '';position: absolute;left: 0;top:100px;right:0;border-bottom:2px solid #ebebeb}
+.formwrap.find .contarea.set + .contarea{border-top:0}
+
 .position_map{position: relative;display:block;width:320px;height:320px;margin: 10px auto;background: url(/pub/resource/images/wrap_map@3x.png) no-repeat center;background-size: 320px;}
 .position_map .btn_posi{position: absolute;display:block;width:60px;height:60px;background: #fff;border-radius: 50%;box-shadow: 0 12px 18px 0 rgba(0, 0, 0, 0.16);}
 .position_map .btn_posi.top{top:20px;left:20px;background: #fff url(/pub/resource/images/ic_position_top_bw@3x.png) no-repeat center;background-size: 40px;}
@@ -432,6 +464,8 @@ p.btn_ipt{line-height: 48px;text-align: center;box-sizing: border-box;}
 
 	/* 찾기 */
 	.position_map{float: left;margin:0 20px 0 0}
+	.list_boxfind > li{ display: inline-block; float: left; width: 50%;padding: 15px;box-sizing: border-box;}
+	.list_boxfind > li + li{margin: 0;}
 	
 	/* 특수페이지 */
 	.formwrap.find .flexx.mob_sp{display: flex;}
@@ -462,19 +496,29 @@ p.btn_ipt{line-height: 48px;text-align: center;box-sizing: border-box;}
 	.header .rightarea .flexh_center .infobox .tit{color:#828282;font-weight: normal;margin: 0;}
 	.header .rightarea .flexh_center .infobox span{display: none;}
 
-	.header_sub{width: 100%;display: flex; align-items: center;height: 100px;padding-top: 100px;text-align: left;}
+	.header_sub{width: 100%;display: flex; align-items: center;height: 100px;padding-top: 80px;text-align: left;}
 	.header_sub .btn_add{position: absolute;left: 100px;width:56px;height:56px;background: url(../images/btn_add@3x.png) no-repeat center;background-size:56px;}
 	.header_sub .flexh_center{position: absolute;display: flex;width:856px;left:50%;padding-top: 0;border-top: 0;margin-left: -428px;}
 	.header_sub .flexh_center .ico_user{display: inline-block;width:64px;height: 64px;}
 	.header_sub .flexh_center .ico_user img{width:64px;height: 64px;}
 	.header_sub .flexh_center .infobox{text-align: left;margin: 0 0 0 15px;}
 
+	.footer{height: 293px;text-align: left;margin-top: 200px;}
+	.footer .logo_footer{border-bottom:1px solid #fff}
+	.footer .footer_left{float:left}
+	.footer .footer_right{display: block;float:right}
+	.footer .footer_right ul{float: left;margin-right:70px}
+	.footer .footer_right ul li{color:#fff}
+	.footer .footer_right ul li:first-child{font-weight: bold;margin-bottom: 20px;line-height: 24px;}
+	.footer .footer_right ul li a{color:#fff}
+	.footer .footer_right ul li + li{margin-top:15px}
+
 	.container.home{text-align: center;}
 	.container.home .content.wide{display:inline-block;}
 	.container.form{margin-top:0;padding: 160px 0 0;}
 	.container.form.page404{padding: 80px 0;}
 	.container.form.page404 .formwrap{width:856px;min-height: 500px;}
-	
+	.container.find_home{text-align: center;}
 
 	.content{display: inline-block;width:856px;text-align:left;}
 	.content.wide{width:932px;}
@@ -491,7 +535,7 @@ p.btn_ipt{line-height: 48px;text-align: center;box-sizing: border-box;}
 
 	.list_slide > li .listbox li + li{margin-top: 30px;}
 
-	.formwrap{width:560px;min-height:800px;padding:40px;}
+	.formwrap{width:560px;min-height:800px;padding:40px;box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);}
 	.formwrap.club{width:916px;}
 	.formwrap.club .contarea > .flexx + .flexx{margin-top: 30px;}
 	.formwrap.club .btnfixed .btn_blue{width:50%}
@@ -510,7 +554,15 @@ p.btn_ipt{line-height: 48px;text-align: center;box-sizing: border-box;}
 	.formwrap.find .titlearea h3{font-size:20px}
 	.formwrap.find .btn_skip{font-size:20px}
 	.formwrap.find .btnfixed .btn_blue{width:50%}
+
+	.formwrap.find .contarea.set{margin-top:-20px}
+
+	.content.sideuser .formwrap.find{width:auto;padding: 20px;}
 	
+	.list_boxfind > li{width: 33%;}
+	.list_boxfind > li:nth-child(2){width:34%}
+
+
 	.btn_toggle{width:60px;height:32px}
 	.btn_toggle::before{height:20px;margin-top:-10px;border-radius:10px}
 	.btn_toggle span{width:32px;height:32px;}
