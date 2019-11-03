@@ -8,9 +8,19 @@ $(window).ready(function(){
     $('.list_slide .btn_slide').on('click',function(){
 		$(this).toggleClass('on').siblings().stop().slideToggle();
     });
+
+    //셀렉트박스
     $('.select > button').on("click", function(){{
-      $(this).parent().stop().toggleClass("open");
-      $(this).siblings('ul').stop().slideToggle();
+
+      if($(this).parent().hasClass("open")){
+        $(this).siblings('ul').stop().slideUp(function(){
+          $(this).parent().stop().removeClass("open");});
+      }else{
+        $(this).parent().stop().addClass("open");
+        $(this).siblings('ul').stop().slideDown();
+      }
+      // $(this).parent().stop().toggleClass("open");
+      // $(this).siblings('ul').stop().slideToggle();
     }})
 
     // btn_toggle
@@ -80,11 +90,12 @@ openMenu = function(id, url, options){
   openSubPopup = function(id, url, options){
     $('html').addClass("opensubpop");
 
-    $('#popsubTest').css('display', 'inline-block');
+    $('#popsubTest').addClass("on");
     
     // menu close
     $('.btn_back').on("click", function(){
       $('html').removeClass("opensubpop");
+      $('#popsubTest').removeClass("on");
     });
 
   }

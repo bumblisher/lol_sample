@@ -133,7 +133,9 @@ html.openpop body{overflow: hidden;}
 .list_boxfind .flexh_center{display: inline-block;left:auto;margin:0;text-align: center;}
 .list_boxfind .flexh_center .ico_user{display: block;width:auto;height: 64px;}
 .list_boxfind .flexh_center .ico_user img{width:64px;height: 64px;}
-
+.list_boxfind .info_team{display:block;padding:20px;width:100%;box-sizing: border-box;border-bottom:2px solid #ebebeb}
+.list_boxfind .info_team p:first-child{font-weight: bold;}
+.list_boxfind .info_team p + p{line-height: 20px;font-size: 12px;margin-top:10px;}
 
 
 .footer{padding: 50px 100px;background: #4e4e4e;margin-top:100px;box-sizing: border-box;text-align: center;}
@@ -252,14 +254,14 @@ html.openpop body{overflow: hidden;}
 /* componant START */
 select.round{width: 150px; height: 40px; padding: 0px 20px; font-size: 16px; border: 2px solid #ccc; background: #fff url(/pub/resource/images/btn_down@3x.png) no-repeat right 10px center; background-size: 30px; border-radius: 20px; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box;}
 
-.select{position: relative;display: inline-block;width:150px;height: 40px;border:2px solid #c3c3c3;border-radius: 20px;box-sizing: border-box;}
-.select > button{width:100%;height: 100%;padding-left: 20px;text-align: left;box-sizing: border-box;position: relative;z-index: 11;background: #fff url(/pub/resource/images/btn_down@3x.png) no-repeat right 20px center;background-size: 30px;border-radius: 20px;outline: none;}
+.select{position: relative;display: inline-block;width:150px;height: 40px;border:2px solid #c3c3c3;border-radius: 20px;box-sizing: border-box;background: #fff url(/pub/resource/images/btn_down@3x.png) no-repeat right 20px center;background-size: 30px;}
+.select > button{width:100%;height: 100%;padding-left: 20px;text-align: left;box-sizing: border-box;position: relative;z-index: 11;border-radius: 20px;outline: none;}
 .select > ul{display: none;position: absolute;top: 17px;left:-2px;right:-2px;border: 2px solid #c3c3c3;border-top:0;background: #fff;border-radius: 0 0 20px 20px;overflow: hidden;z-index: 10;}
 .select > ul li{height: 40px;padding: 0 8px;box-sizing: border-box;}
 .select > ul li:first-child{height: 59px;padding-top:20px;}
 .select > ul li button{width:100%;height:100%;text-align: left;border-top:1px solid #ebebeb}
 .select.open{border-radius: 20px 20px 0 0;border-color:#2f2fd3}
-.select.open > ul{top: 36px;border-color:#2f2fd3}
+.select.open > ul{top: 36px;border-color:#2f2fd3;z-index: 12;}
 .select.open > ul li:first-child{height: 40px;padding-top:0;}
 
 .rec_input_tit{margin:20px 0 10px;color:#2f2fd3;}
@@ -380,6 +382,31 @@ p.btn_ipt{line-height: 48px;text-align: center;box-sizing: border-box;}
 .list_boxfind .flexx .ico_position{width:24px;height:24px;background-size: 24px !important;border-width: 1px;}
 .list_boxfind .flexx .rec_input_tit {margin: 0 10px 0 0;color:#000}
 
+
+.grp_position{margin-top:10px;}
+.grp_position .grp_normal > li{display: flex;align-items: center;padding:20px 0}
+.grp_position .grp_normal > li > div:first-child{text-align: center;width:65px;margin-right:30px;}
+.grp_position .grp_normal > li > div:first-child .ico_position{width:40px;height:40px;background-size: 36px;margin-bottom:5px;border:0}
+.grp_position .grp_normal > li > .select{width:100%;}
+
+.grp_posidetail .position_map{display: none;}
+.list_positeam .select{width:90px;height: 50px;border-radius: 8px 0 0 8px;}
+.list_positeam .select > .ico_position{border:0;background-size: 26px;background-color: transparent;background-position: left 10px center;}
+.list_positeam .select li .ico_position{border:0;background-size: 26px;border-radius: 0;}
+.list_positeam .select > ul{top:37px}
+.list_positeam .select.open{border-radius: 8px 0 0 0;}
+.list_positeam .select.open > ul{top:46px}
+.list_positeam > .flexx > div:last-child{border: 2px solid #c3c3c3;border-left:0;flex: 1;display: flex;height: 50px;box-sizing: border-box;border-radius:0 8px 8px 0}
+.list_positeam > .flexx > div:last-child input{border: 0;height: 100%;flex:1;padding:10px;box-sizing: border-box;font-size:16px}
+.list_positeam > .flexx > div:last-child .btn_plus{width:50px;background: url(/pub/resource/images/ic_plus@3x.png) no-repeat center;background-size: 24px;}
+.list_positeam > ul{margin-top: 10px;}
+.list_positeam > ul > li{display: flex;align-items: center;padding:10px 50px 10px 10px;position: relative;}
+.list_positeam > ul > li + li{border-top:2px solid #ebebeb}
+.list_positeam > ul > li span{color:#828282;vertical-align: middle;}
+.list_positeam > ul > li span + span{flex:1;overflow: hidden;}
+.list_positeam > ul > li .ico_position{margin-right: 10px;border: 0;width: 30px;height: 30px;background-size: 26px;}
+.list_positeam > ul > li .btn_minus{position: absolute;top:0;right:0;width:50px;height: 50px;background: url(/pub/resource/images/ic_minus@3x.png) no-repeat center;background-size: 24px;}
+
 .box_profile{border-top:2px solid #ebebeb;padding: 10px;}
 .box_profile > li{display:inline-flex;width:50%;padding:10px;float:left;box-sizing: border-box;font-size:12px}
 .box_profile > li span:last-child{margin-left:auto;color:#828282}
@@ -457,9 +484,9 @@ p.btn_ipt{line-height: 48px;text-align: center;box-sizing: border-box;}
 .position_map{position: relative;display:block;width:320px;height:320px;margin: 10px auto;background: url(/pub/resource/images/wrap_map@3x.png) no-repeat center;background-size: 320px;}
 .position_map .btn_posi{position: absolute;display:block;width:60px;height:60px;background: #fff;border-radius: 50%;box-shadow: 0 12px 18px 0 rgba(0, 0, 0, 0.16);}
 .position_map .btn_posi.top{top:20px;left:20px;background: #fff url(/pub/resource/images/ic_position_top_bw@3x.png) no-repeat center;background-size: 40px;}
-.position_map .btn_posi.jungle{top:20px;left:130px;background: #fff url(/pub/resource/images/ic_position_jungle_bw@3x.png) no-repeat center;background-size: 40px;}
+.position_map .btn_posi.jung{top:20px;left:130px;background: #fff url(/pub/resource/images/ic_position_jungle_bw@3x.png) no-repeat center;background-size: 40px;}
 .position_map .btn_posi.mid{top:128px;left:130px;background: #fff url(/pub/resource/images/ic_position_mid@3x.png) no-repeat center;background-size: 40px;}
-.position_map .btn_posi.support{top:128px;right:20px;background: #fff url(/pub/resource/images/ic_position_support@3x.png) no-repeat center;background-size: 40px;}
+.position_map .btn_posi.sup{top:128px;right:20px;background: #fff url(/pub/resource/images/ic_position_support@3x.png) no-repeat center;background-size: 40px;}
 .position_map .btn_posi.bot{bottom:20px;right:20px;background: #fff url(/pub/resource/images/ic_position_bot_bw@3x.png) no-repeat center;background-size: 40px;}
 
 
@@ -537,7 +564,8 @@ p.btn_ipt{line-height: 48px;text-align: center;box-sizing: border-box;}
 	.position_map{float: left;margin:0 20px 0 0}
 	ul.list_boxfind > li{ display: inline-block; float: left; width: calc(50% - 30px);margin:15px;box-sizing: border-box;}
 
-	
+	.grp_position .grp_normal > li{padding: 20px;display: inline-flex;width: 50%;float: left;box-sizing: border-box;}
+
 	/* 특수페이지 */
 	.formwrap.find .flexx.mob_sp{display: flex;}
 	.formwrap.find .flexx.mob_sp .rightbox{display: inline-block;padding: 0;}
@@ -647,7 +675,7 @@ p.btn_ipt{line-height: 48px;text-align: center;box-sizing: border-box;}
 	.content.sideuser .formwrap.find .contarea.grp_user{display: block;}
 	.content.sideuser .contarea + .contarea{margin-top: 20px;border-top:1px solid #c3c3c3}
 	/* .content.sideuser .formwrap.find .flexx.link .rec_input_tit{font-size:12px;min-width:62px} */
-	.pop_sub_tit{display: none;}
+	
 	
 	
 	.btn_toggle{width:60px;height:32px}
@@ -662,6 +690,7 @@ p.btn_ipt{line-height: 48px;text-align: center;box-sizing: border-box;}
 
 	/* pop */
 	.pop_sub{display: inline-block;position: relative;left:auto;top:auto;bottom:auto;right:auto;z-index: inherit;}
+	.pop_sub_tit{display: none;}
 
 	/* 특수케이스 */
 	.content.sideuser .formwrap.find .flexx.mob_sp{display: block;position: relative;}
@@ -713,3 +742,5 @@ p.btn_ipt{line-height: 48px;text-align: center;box-sizing: border-box;}
  body.index h3{font-size: 20px;margin: 15px 0;}
  body.index ul{list-style: square;padding: 20px;}
  body.index ul li + li{margin-top: 10px;}
+
+ #popsubTest.on{display: inline-block;}
