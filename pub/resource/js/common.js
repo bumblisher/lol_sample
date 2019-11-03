@@ -47,9 +47,9 @@ $(window).ready(function(){
     $(classname).siblings().html(++i + "%");
  }
  
-  // 팝업 띄우기
-openPopup = function(id, url, options){
-  $('html').addClass("openpop");
+  // 메뉴 띄우기
+openMenu = function(id, url, options){
+  $('html').addClass("openmenu");
   var dimFlag = $('body').find(".header").length;
 
   if(dimFlag){
@@ -57,19 +57,35 @@ openPopup = function(id, url, options){
   }else{
     $('body').append("<div class='dim'></div>");
   }
-	
-	$('#popTest').show();
- 
-	$(".dim").on("click", function(){
-		$(this).remove();
-		$('html').removeClass("openpop");
-		$('#popTest').hide();
-  });
 
   // menu close
   $('.header .btn_close').on("click", function(){
     $('.header .dim').remove();
-    $('html').removeClass("openpop");
+    $('html').removeClass("openmenu");
+  });
+
+
+  // 테스트 팝업 띄우기
+	$('#popTest').show();
+  
+  //dim 클릭
+	$(".dim").on("click", function(){
+		$(this).remove();
+		$('html').removeClass("openmenu");
+		$('#popTest').hide();
   });
 }
 
+  // 찾기 서브 팝업 띄우기  ---- 오류
+  openSubPopup = function(id, url, options){
+    $('html').addClass("opensubpop");
+
+    $('#popsubTest').css('display', 'inline-block');
+    
+    // menu close
+    $('.btn_back').on("click", function(){
+      $('html').removeClass("opensubpop");
+    });
+
+  }
+  

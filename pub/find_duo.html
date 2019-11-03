@@ -21,7 +21,7 @@
             <ul class="list_set">
                 <li class="menu_alert"><a href="#">알림<span>4</span></a></li>
                 <li class="menu_set"><a href="#">설정</a></li>
-                <li class="menu_ham"><a href="#" id="openPopup" onclick="openPopup()">메뉴</a></li>
+                <li class="menu_ham"><a href="#" id="openMenu" onclick="openMenu()">메뉴</a></li>
             </ul>
             <div class="aside">
                 <div class="rightarea">
@@ -64,7 +64,10 @@
                 <div class="ad_right">광고오른쪽</div>
                 <div>
                     <div class="divistion">
-                        <div class="content sideuser pop_sub">
+                        <div class="content sideuser pop_sub" id="popsubTest">
+                            <div class="pop_sub_tit">
+                                <a href="#" class="btn_back">찾기</a>
+                            </div>
                             <div class="formwrap find">
                                 <div class="contarea grp_user">
                                     <div class="flexh_center">
@@ -86,7 +89,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="contarea" style="display:none">
+                                <div class="contarea">
                                     <div class="flexx link mob_sp">
                                         <p class="rec_input_tit ">게임 시간</p>
                                         <div class="rightbox">
@@ -174,7 +177,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="contarea">
+                                <div class="contarea" style="display:none">
                                     <ul class="list_alarm">
                                         <li>
                                             <p class="txt"><span class="ico_user"><img src="/pub/resource/images/ico_user@3x.png" alt=""></span>Grizzle_bb</p>
@@ -208,7 +211,7 @@
                                         <input type="text" class="rec_input shadow" placeholder="찾고 싶은 아이디를 입력하세요.">
                                         <button class="btn_search"></button>
                                     </div>
-                                    <button class="btn_filter"></button>
+                                    <button class="btn_filter" id="openPopup" onclick="openSubPopup()"></button>
                                 </div>
                                 <ul class="list_boxfind cb">
                                     <li>
