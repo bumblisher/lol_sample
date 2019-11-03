@@ -20,7 +20,7 @@ $(window).ready(function(){
 
     // radio_btnty
     $('.radio_btnty button').on('click',function(){
-      var radioIdx = $(this).index()*80;
+      var radioIdx = $(this).index()*78;
       $(this).parent().children().removeClass("on");
       $(this).addClass('on');
       $(this).parent().children("span").css('left',radioIdx);
